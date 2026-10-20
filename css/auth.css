@@ -186,6 +186,30 @@ html, body {
   pointer-events: none;
 }
 
+/* Register Page Atmospheric Background (background/Romantic Ivy Café Interior.png) */
+.register-backdrop-layer {
+  position: fixed;
+  inset: -30px;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  z-index: 0;
+  background-image: url('../background/Romantic%20Ivy%20Caf%C3%A9%20Interior.png');
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  filter: blur(6px) brightness(0.88);
+  transform: scale(1.05);
+  pointer-events: none;
+}
+
+.register-backdrop-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(circle at 50% 40%, rgba(18, 24, 20, 0.42) 0%, rgba(8, 12, 10, 0.76) 100%), rgba(12, 22, 16, 0.22);
+  pointer-events: none;
+}
+
 .auth-bg-particles {
   position: fixed;
   inset: 0;
