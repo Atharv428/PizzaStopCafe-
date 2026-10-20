@@ -68,12 +68,17 @@
 
       <!-- Left Panel: Cinematic Food Photography Showcase -->
       <section class="auth-showcase-panel" aria-label="Pizza Stop Alephata Culinary Highlights">
-        <img 
-          src="./assets/food-hero.jpg" 
-          alt="Artisan Pizza, Gourmet Burgers, and Cold Coffee at Pizza Stop Alephata" 
+        <video 
           class="showcase-bg-image" 
-          id="showcase-active-img"
+          id="showcase-active-video" 
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          poster="./assets/food-hero.jpg"
         >
+          <source src="./video/login.mp4" type="video/mp4">
+        </video>
         <div class="showcase-gradient-overlay"></div>
         <div class="showcase-mesh-tint"></div>
 
