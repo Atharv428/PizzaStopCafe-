@@ -61,15 +61,26 @@ function setupPasswordToggles() {
  * Detect Email vs Mobile Number input to update prefix icon dynamically
  */
 function setupIdentityDetection() {
-  const identityInputs = document.querySelectorAll('input[name="identity"], #login-identity, #register-identity');
+  const identityInputs = document.querySelectorAll('input[name="identity"], #login-identity, #register-identity, #forgot-identity');
   identityInputs.forEach(input => {
     const parent = input.closest('.input-container');
     const icon = parent ? parent.querySelector('.input-prefix-icon') : null;
     if (!icon) return;
 
     input.addEventListener('input', () => {
-      const val = input.value.trim();
-      if (/^\d+$/.test(val)) {
+      let val = input.value;
+      // If user starts entering a phone number (digits or +)
+      if (/^[\+\d]/.test(val.trim())) {
+        let digits = val.replace(/\D/g, '');
+        // If user typed 91 prefix with 12 digits, strip to 10 digits
+        if (digits.length > 10 && digits.startsWith('91')) {
+          digits = digits.slice(2);
+        }
+        // Restrict strictly to 10 digits limit for Indian mobile numbers
+        if (digits.length > 10) {
+          digits = digits.slice(0, 10);
+        }
+        input.value = digits;
         icon.className = 'fas fa-phone-alt input-prefix-icon';
       } else {
         icon.className = 'fas fa-envelope input-prefix-icon';
@@ -155,9 +166,11 @@ function hideBanners() {
  */
 function isValidEmailOrMobile(value) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const mobileRegex = /^[6-9]\d{9}$/;
   const cleanMobile = value.replace(/[\s\-\+]/g, '');
-  return emailRegex.test(value) || mobileRegex.test(cleanMobile) || /^\+91[6-9]\d{9}$/.test(cleanMobile);
+  // Indian mobile: exactly 10 digits starting with 6, 7, 8, or 9
+  const indianMobileRegex = /^[6-9]\d{9}$/;
+  const indianWith91 = /^91[6-9]\d{9}$/;
+  return emailRegex.test(value) || indianMobileRegex.test(cleanMobile) || indianWith91.test(cleanMobile);
 }
 
 /**
@@ -170,19 +183,6 @@ function setupLoginForm() {
   const identityInput = document.getElementById('login-identity');
   const passwordInput = document.getElementById('login-password');
   const submitBtn = document.getElementById('btn-login-submit');
-  const demoBtn = document.getElementById('btn-demo-autofill');
-
-  // Quick Demo Autofill
-  if (demoBtn && identityInput && passwordInput) {
-    demoBtn.addEventListener('click', () => {
-      identityInput.value = 'foodie@pizzastop.com';
-      passwordInput.value = 'PizzaLover@2026';
-      clearFieldError(identityInput, 'login-identity-hint');
-      clearFieldError(passwordInput, 'login-password-hint');
-      hideBanners();
-      showBanner('success', 'Demo credentials filled! Click "Sign In" below.');
-    });
-  }
 
   // Real-time input clearing
   if (identityInput) {
@@ -215,10 +215,14 @@ function setupLoginForm() {
 
     // Validate Identity
     if (!identityVal) {
-      setFieldError(identityInput, 'login-identity-hint', 'Please enter your email or 10-digit mobile number.');
+      setFieldError(identityInput, 'login-identity-hint', 'Please enter your email or 10-digit Indian mobile number.');
       isValid = false;
     } else if (!isValidEmailOrMobile(identityVal)) {
-      setFieldError(identityInput, 'login-identity-hint', 'Please enter a valid email (e.g. name@mail.com) or 10-digit mobile.');
+      if (/^\d+$/.test(identityVal)) {
+        setFieldError(identityInput, 'login-identity-hint', 'Please enter a valid 10-digit Indian mobile number (starting with 6, 7, 8, or 9).');
+      } else {
+        setFieldError(identityInput, 'login-identity-hint', 'Please enter a valid email or 10-digit Indian mobile number.');
+      }
       isValid = false;
     } else {
       clearFieldError(identityInput, 'login-identity-hint');
@@ -411,10 +415,14 @@ function setupRegisterForm() {
 
     // 2. Email or Mobile
     if (!identityVal) {
-      setFieldError(identityInput, 'register-identity-hint', 'Please enter your email or 10-digit mobile number.');
+      setFieldError(identityInput, 'register-identity-hint', 'Please enter your email or 10-digit Indian mobile number.');
       isValid = false;
     } else if (!isValidEmailOrMobile(identityVal)) {
-      setFieldError(identityInput, 'register-identity-hint', 'Please enter a valid email or 10-digit mobile number.');
+      if (/^\d+$/.test(identityVal)) {
+        setFieldError(identityInput, 'register-identity-hint', 'Please enter a valid 10-digit Indian mobile number (starting with 6, 7, 8, or 9).');
+      } else {
+        setFieldError(identityInput, 'register-identity-hint', 'Please enter a valid email or 10-digit Indian mobile number.');
+      }
       isValid = false;
     } else {
       clearFieldError(identityInput, 'register-identity-hint');

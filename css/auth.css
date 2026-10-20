@@ -507,8 +507,31 @@ html, body {
 .auth-brand-emblem {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding: 6px 16px 6px 6px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(167, 201, 87, 0.35);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.auth-brand-emblem:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.auth-brand-logo-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--c-leaf);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
 .auth-emblem-icon {
@@ -526,11 +549,14 @@ html, body {
 
 .auth-brand-title {
   font-family: var(--font-brand);
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--c-leaf);
+  background: linear-gradient(135deg, #1A1A1A 0%, #B45309 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #1A1A1A;
 }
 
 .auth-heading {
