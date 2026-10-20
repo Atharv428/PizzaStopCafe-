@@ -219,7 +219,7 @@ function setupLoginForm() {
       isValid = false;
     } else if (!isValidEmailOrMobile(identityVal)) {
       if (/^\d+$/.test(identityVal)) {
-        setFieldError(identityInput, 'login-identity-hint', 'Please enter a valid 10-digit Indian mobile number (starting with 6, 7, 8, or 9).');
+        setFieldError(identityInput, 'login-identity-hint', 'Please enter a valid 10-digit Indian mobile number.');
       } else {
         setFieldError(identityInput, 'login-identity-hint', 'Please enter a valid email or 10-digit Indian mobile number.');
       }
@@ -419,7 +419,7 @@ function setupRegisterForm() {
       isValid = false;
     } else if (!isValidEmailOrMobile(identityVal)) {
       if (/^\d+$/.test(identityVal)) {
-        setFieldError(identityInput, 'register-identity-hint', 'Please enter a valid 10-digit Indian mobile number (starting with 6, 7, 8, or 9).');
+        setFieldError(identityInput, 'register-identity-hint', 'Please enter a valid 10-digit Indian mobile number.');
       } else {
         setFieldError(identityInput, 'register-identity-hint', 'Please enter a valid email or 10-digit Indian mobile number.');
       }

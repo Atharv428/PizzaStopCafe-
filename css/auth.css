@@ -162,10 +162,34 @@ html, body {
   display: none !important;
 }
 
+/* Login Page Blurred Atmospheric Background (background/1.png) */
+.login-backdrop-layer {
+  position: fixed;
+  inset: -30px;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  z-index: 0;
+  background-image: url('../background/1.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: blur(14px) brightness(0.82) saturate(1.1);
+  transform: scale(1.05);
+  pointer-events: none;
+}
+
+.login-backdrop-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(circle at 50% 40%, rgba(18, 22, 54, 0.42) 0%, rgba(10, 12, 30, 0.76) 100%), rgba(20, 28, 65, 0.28);
+  pointer-events: none;
+}
+
 .auth-bg-particles {
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: 2;
   pointer-events: none;
   opacity: 0.2;
   background-image: radial-gradient(var(--c-leaf, #00F5FF) 1px, transparent 1px);
