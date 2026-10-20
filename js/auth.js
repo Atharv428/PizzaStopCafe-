@@ -253,6 +253,34 @@ function setupLoginForm() {
       showBanner('success', 'Welcome back, Food Lover! You are successfully signed in.');
     }, 800);
   });
+
+  // Social Login Mock Handlers
+  const googleBtn = document.getElementById('btn-google-login');
+  const facebookBtn = document.getElementById('btn-facebook-login');
+
+  if (googleBtn) {
+    googleBtn.addEventListener('click', () => {
+      googleBtn.style.opacity = '0.7';
+      const label = googleBtn.querySelector('span');
+      if (label) label.textContent = 'Connecting with Google...';
+      setTimeout(() => {
+        googleBtn.style.opacity = '1';
+        if (label) label.textContent = 'Continue with Google';
+      }, 700);
+    });
+  }
+
+  if (facebookBtn) {
+    facebookBtn.addEventListener('click', () => {
+      facebookBtn.style.opacity = '0.7';
+      const label = facebookBtn.querySelector('span');
+      if (label) label.textContent = 'Connecting with Facebook...';
+      setTimeout(() => {
+        facebookBtn.style.opacity = '1';
+        if (label) label.textContent = 'Continue with Facebook';
+      }, 700);
+    });
+  }
 }
 
 /**

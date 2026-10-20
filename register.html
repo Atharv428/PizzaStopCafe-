@@ -1,44 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Account - Pizza Stop Alephata | Join the Food Club</title>
-
-  <!-- SEO Optimization Meta Tags -->
-  <meta name="description" content="Create your member account at Pizza Stop Alephata on Pune-Nashik Highway. Enjoy exclusive rewards, faster pizza ordering, and special cafe perks.">
+  <meta name="description"
+    content="Create your member account at Pizza Stop Alephata on Pune-Nashik Highway. Enjoy exclusive rewards, faster pizza ordering, and special cafe perks.">
   <meta name="theme-color" content="#163B2B">
-
-  <!-- Manifest & Favicon -->
   <link rel="icon" type="image/jpeg" href="./Logo/logo.jpeg">
-
-  <!-- Google Fonts: Cinzel, Playfair Display & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome 6 Icons -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Dedicated Cafe Auth Stylesheet -->
   <link rel="stylesheet" href="./css/auth.css?v=7">
-
-  <!-- Immediate Theme Loader (prevents flash of incorrect theme) -->
   <script>
     (function () {
       const valid = ['cyan-purple', 'orange-cream', 'lime-violet'];
       const saved = localStorage.getItem('pizzastop_theme');
-      const theme = valid.includes(saved) ? saved : 'cyan-purple';
-      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', valid.includes(saved) ? saved : 'cyan-purple');
     })();
   </script>
 </head>
+
 <body>
-
-  <!-- Ambient Particles Layer -->
   <div class="auth-bg-particles"></div>
-
-  <!-- Top Floating Navigation Bar -->
   <nav class="top-nav-bar" aria-label="Brand Navigation">
     <div class="brand-nav-link">
       <img src="./Logo/logo.jpeg" alt="Pizza Stop Alephata Logo" class="brand-logo-img" width="54" height="54">
@@ -47,174 +35,94 @@
         <span class="brand-nav-badge">Pune - Nashik Highway Oasis</span>
       </div>
     </div>
-
     <div class="nav-actions">
-      <a href="story.html" class="nav-badge-pill" title="Back to Pizza Stop Story">
-        <i class="fas fa-arrow-left"></i>
-        <span>Story</span>
-      </a>
-
-      <!-- Navigation between Create Account and Login only -->
-      <a href="login.html" class="btn-nav-switch" id="nav-goto-login" title="Return to sign in">
-        <i class="fas fa-sign-in-alt"></i>
-        <span>Sign In</span>
-      </a>
+      <a href="story.html" class="nav-badge-pill" title="Back to Pizza Stop Story"><i
+          class="fas fa-arrow-left"></i><span>Story</span></a>
+      <a href="login.html" class="btn-nav-switch" id="nav-goto-login" title="Return to sign in"><i
+          class="fas fa-sign-in-alt"></i><span>Sign In</span></a>
     </div>
   </nav>
-
-  <!-- Main Split-Screen Authentication Container -->
   <main class="auth-page-wrapper">
     <div class="auth-split-container">
-
-      <!-- Left Panel: Cinematic Food Photography Showcase -->
       <section class="auth-showcase-panel" aria-label="Pizza Stop Alephata Membership Privileges">
-        <img 
-          src="./assets/pizza-closeup.jpg" 
-          alt="Freshly baked artisan cheese burst pizza at Pizza Stop Alephata" 
-          class="showcase-bg-image" 
-          id="showcase-active-img"
-        >
+        <img src="./assets/pizza-closeup.jpg" alt="Freshly baked artisan cheese burst pizza at Pizza Stop Alephata"
+          class="showcase-bg-image" id="showcase-active-img">
         <div class="showcase-gradient-overlay"></div>
         <div class="showcase-mesh-tint"></div>
-
         <div class="showcase-content-top">
-          <div class="showcase-rating-pill">
-            <i class="fas fa-crown"></i>
-            <span>Join 5,000+ Highway Foodies</span>
-          </div>
+          <div class="showcase-rating-pill"><i class="fas fa-crown"></i><span>Join 5,000+ Highway Foodies</span></div>
         </div>
-
         <div class="showcase-content-bottom">
-          <div class="showcase-badge-pill">
-            <i class="fas fa-sparkles"></i> Exclusive Member Perks
-          </div>
-          
-          <h2 class="showcase-heading" id="showcase-heading-text">
-            Unlock Highway Treats, Secret Crusts &amp; <span>Instant Perks.</span>
-          </h2>
-          
-          <p class="showcase-desc">
-            Become part of the Pizza Stop Alephata family. Receive personalized order discounts, faster highway takeaways, and birthday celebration surprises.
-          </p>
-
+          <div class="showcase-badge-pill"><i class="fas fa-sparkles"></i> Exclusive Member Perks</div>
+          <h2 class="showcase-heading" id="showcase-heading-text">Unlock Highway Treats, Secret Crusts &amp;
+            <span>Instant Perks.</span></h2>
+          <p class="showcase-desc">Become part of the Pizza Stop Alephata family. Receive personalized order discounts,
+            faster highway takeaways, and birthday celebration surprises.</p>
           <div class="showcase-features-grid">
-            <div class="showcase-feat-item">
-              <i class="fas fa-pizza-slice"></i>
-              <span>Instant Welcome Treat</span>
-            </div>
-            <div class="showcase-feat-item">
-              <i class="fas fa-bolt"></i>
-              <span>Express Highway Pickup</span>
-            </div>
-            <div class="showcase-feat-item">
-              <i class="fas fa-coins"></i>
-              <span>Cheesy Reward Coins</span>
-            </div>
-            <div class="showcase-feat-item">
-              <i class="fas fa-chair"></i>
-              <span>Priority Table Reservations</span>
-            </div>
+            <div class="showcase-feat-item"><i class="fas fa-pizza-slice"></i><span>Instant Welcome Treat</span></div>
+            <div class="showcase-feat-item"><i class="fas fa-bolt"></i><span>Express Highway Pickup</span></div>
+            <div class="showcase-feat-item"><i class="fas fa-coins"></i><span>Cheesy Reward Coins</span></div>
+            <div class="showcase-feat-item"><i class="fas fa-chair"></i><span>Priority Table Reservations</span></div>
           </div>
-
           <div class="showcase-slider-dots">
-            <div class="slider-dot active" data-img="./assets/pizza-closeup.jpg" data-title="Unlock Highway Treats, Secret Crusts &amp; <span>Instant Perks.</span>" title="Artisan Pizza"></div>
-            <div class="slider-dot" data-img="./assets/food-hero.jpg" data-title="Stone-Baked Pizza, Gourmet Burgers &amp; <span>Cold Coffee.</span>" title="Gourmet Feast"></div>
-            <div class="slider-dot" data-img="./assets/add-ons/Cheese Burst Pizza Pull.png" data-title="Cheese Burst Indulgence &amp; <span>Highway Flavours.</span>" title="Cheese Burst"></div>
+            <div class="slider-dot active" data-img="./assets/pizza-closeup.jpg"
+              data-title="Unlock Highway Treats, Secret Crusts &amp; <span>Instant Perks.</span>" title="Artisan Pizza">
+            </div>
+            <div class="slider-dot" data-img="./assets/food-hero.jpg"
+              data-title="Stone-Baked Pizza, Gourmet Burgers &amp; <span>Cold Coffee.</span>" title="Gourmet Feast">
+            </div>
+            <div class="slider-dot" data-img="./assets/add-ons/Cheese Burst Pizza Pull.png"
+              data-title="Cheese Burst Indulgence &amp; <span>Highway Flavours.</span>" title="Cheese Burst"></div>
           </div>
         </div>
       </section>
-
-      <!-- Right Panel: Authentication Form Card -->
       <section class="auth-form-panel" aria-label="Create Account">
-        
-        <!-- Cafe Brand Header -->
         <div class="auth-header-block">
           <div class="auth-brand-emblem">
-            <div class="auth-emblem-icon">
-              <i class="fas fa-pizza-slice"></i>
-            </div>
+            <div class="auth-emblem-icon"><i class="fas fa-pizza-slice"></i></div>
             <span class="auth-brand-title">Pizza Stop Alephata</span>
           </div>
           <h1 class="auth-heading">Create Your Account</h1>
-          <p class="auth-subtitle">Join the club for handcrafted pizza goodness, highway dine-in perks &amp; rewards.</p>
+          <p class="auth-subtitle">Join the club for handcrafted pizza goodness, highway dine-in perks &amp; rewards.
+          </p>
         </div>
-
-        <!-- Mode Indicator Switch -->
         <div class="auth-page-indicator" role="navigation" aria-label="Account Views">
-          <a href="login.html" class="auth-page-tab" id="tab-switch-login">
-            <i class="fas fa-sign-in-alt"></i> Sign In
-          </a>
-          <span class="auth-page-tab active">
-            <i class="fas fa-user-plus"></i> Create Account
-          </span>
+          <a href="login.html" class="auth-page-tab" id="tab-switch-login"><i class="fas fa-sign-in-alt"></i> Sign
+            In</a>
+          <span class="auth-page-tab active"><i class="fas fa-user-plus"></i> Create Account</span>
         </div>
-
-
-
-        <!-- Create Account Form -->
         <form id="form-register" class="auth-form" novalidate>
-          
-          <!-- Full Name Field -->
           <div class="form-group">
             <label class="form-label" for="register-fullname">Full Name</label>
             <div class="input-container">
               <i class="fas fa-user input-prefix-icon"></i>
-              <input 
-                type="text" 
-                id="register-fullname" 
-                class="form-input" 
-                placeholder="e.g. Atharv Patil" 
-                autocomplete="name" 
-                required
-              >
+              <input type="text" id="register-fullname" class="form-input" placeholder="e.g. Atharv Patil"
+                autocomplete="name" required>
             </div>
-            <div class="field-error-hint" id="register-fullname-hint">
-              <i class="fas fa-exclamation-triangle"></i> Please enter your full name.
-            </div>
+            <div class="field-error-hint" id="register-fullname-hint"><i class="fas fa-exclamation-triangle"></i> Please
+              enter your full name.</div>
           </div>
-
-          <!-- Email or Mobile Number Field -->
           <div class="form-group">
             <label class="form-label" for="register-identity">Email or Mobile Number</label>
             <div class="input-container">
               <i class="fas fa-envelope input-prefix-icon"></i>
-              <input 
-                type="text" 
-                id="register-identity" 
-                class="form-input" 
-                placeholder="name@example.com or 10-digit mobile" 
-                autocomplete="email" 
-                required
-              >
+              <input type="text" id="register-identity" class="form-input"
+                placeholder="name@example.com or 10-digit mobile" autocomplete="email" required>
             </div>
-            <div class="field-error-hint" id="register-identity-hint">
-              <i class="fas fa-exclamation-triangle"></i> Please enter a valid email or 10-digit mobile number.
-            </div>
+            <div class="field-error-hint" id="register-identity-hint"><i class="fas fa-exclamation-triangle"></i> Please
+              enter a valid email or 10-digit mobile number.</div>
           </div>
-
-          <!-- Password Field with Show/Hide Toggle -->
           <div class="form-group">
             <label class="form-label" for="register-password">Password</label>
             <div class="input-container">
               <i class="fas fa-lock input-prefix-icon"></i>
-              <input 
-                type="password" 
-                id="register-password" 
-                class="form-input" 
-                placeholder="Create a password (min. 8 characters)" 
-                autocomplete="new-password" 
-                minlength="8" 
-                required
-              >
-              <button type="button" class="input-toggle-btn password-toggle-btn" data-target="register-password" aria-label="Toggle password visibility">
-                <i class="fas fa-eye"></i>
-              </button>
+              <input type="password" id="register-password" class="form-input"
+                placeholder="Create a password (min. 8 characters)" autocomplete="new-password" minlength="8" required>
+              <button type="button" class="input-toggle-btn password-toggle-btn" data-target="register-password"
+                aria-label="Toggle password visibility"><i class="fas fa-eye"></i></button>
             </div>
-            <div class="field-error-hint" id="register-password-hint">
-              <i class="fas fa-exclamation-triangle"></i> Password must be at least 8 characters long.
-            </div>
-
-            <!-- Password Strength Meter & Interactive Checklist -->
+            <div class="field-error-hint" id="register-password-hint"><i class="fas fa-exclamation-triangle"></i>
+              Password must be at least 8 characters long.</div>
             <div class="password-strength-box">
               <div class="strength-bar-track">
                 <div class="strength-bar-fill" id="strength-fill"></div>
@@ -227,85 +135,58 @@
               </div>
             </div>
           </div>
-
-          <!-- Confirm Password Field with Show/Hide Toggle -->
           <div class="form-group">
             <label class="form-label" for="register-confirm-password">Confirm Password</label>
             <div class="input-container">
               <i class="fas fa-shield-alt input-prefix-icon"></i>
-              <input 
-                type="password" 
-                id="register-confirm-password" 
-                class="form-input" 
-                placeholder="Re-enter your password" 
-                autocomplete="new-password" 
-                required
-              >
-              <button type="button" class="input-toggle-btn password-toggle-btn" data-target="register-confirm-password" aria-label="Toggle confirm password visibility">
-                <i class="fas fa-eye"></i>
-              </button>
+              <input type="password" id="register-confirm-password" class="form-input"
+                placeholder="Re-enter your password" autocomplete="new-password" required>
+              <button type="button" class="input-toggle-btn password-toggle-btn" data-target="register-confirm-password"
+                aria-label="Toggle confirm password visibility"><i class="fas fa-eye"></i></button>
             </div>
-            <div class="field-error-hint" id="register-confirm-hint">
-              <i class="fas fa-exclamation-triangle"></i> Passwords do not match.
-            </div>
+            <div class="field-error-hint" id="register-confirm-hint"><i class="fas fa-exclamation-triangle"></i>
+              Passwords do not match.</div>
           </div>
-
-          <!-- Terms and Conditions Checkbox -->
-          <div class="form-group" style="margin-top: 2px;">
-            <label class="checkbox-custom-label" style="font-size: 0.8rem; line-height: 1.45;">
+          <div class="form-group" style="margin-top:2px">
+            <label class="checkbox-custom-label" style="font-size:.8rem;line-height:1.45">
               <input type="checkbox" id="register-terms" required>
-              <span>I agree to Pizza Stop Alephata's <a href="#" id="link-terms-modal" style="color: var(--c-leaf); text-decoration: underline;">Terms &amp; Conditions</a> and Privacy Policy.</span>
+              <span>I agree to Pizza Stop Alephata's <a href="#" id="link-terms-modal"
+                  style="color:var(--c-leaf);text-decoration:underline">Terms &amp; Conditions</a> and Privacy
+                Policy.</span>
             </label>
-            <div class="field-error-hint" id="register-terms-hint">
-              <i class="fas fa-exclamation-triangle"></i> You must agree to the Terms &amp; Conditions to create an account.
-            </div>
+            <div class="field-error-hint" id="register-terms-hint"><i class="fas fa-exclamation-triangle"></i> You must
+              agree to the Terms &amp; Conditions to create an account.</div>
           </div>
-
-          <!-- Create Account Submit Button -->
-          <button type="submit" class="btn-auth-submit" id="btn-register-submit">
-            <span class="spinner-inline"></span>
-            <span class="btn-text">Create Account</span>
-            <i class="fas fa-arrow-right"></i>
-          </button>
-
-          <!-- Navigation link back to Login page -->
-          <p class="auth-footer-prompt">
-            Already have an account? <a href="login.html" id="link-goto-login">Sign In</a>
+          <button type="submit" class="btn-auth-submit" id="btn-register-submit"><span
+              class="spinner-inline"></span><span class="btn-text">Create Account</span><i
+              class="fas fa-arrow-right"></i></button>
+          <p class="auth-footer-prompt">Already have an account? <a href="login.html" id="link-goto-login">Sign In</a>
           </p>
-
         </form>
-
       </section>
     </div>
   </main>
-
-  <!-- Terms & Conditions Modal Dialog -->
   <div class="modal-overlay" id="modal-terms" role="dialog" aria-modal="true" aria-labelledby="terms-title">
     <div class="modal-dialog-card">
-      <button type="button" class="modal-close-btn" id="btn-close-terms" aria-label="Close dialog">
-        <i class="fas fa-times"></i>
-      </button>
+      <button type="button" class="modal-close-btn" id="btn-close-terms" aria-label="Close dialog"><i
+          class="fas fa-times"></i></button>
       <div class="modal-header">
         <h3 id="terms-title">Terms &amp; Conditions</h3>
         <p>Pizza Stop Alephata &bull; Customer Service Guidelines</p>
       </div>
       <div class="modal-body">
-        <p style="margin-bottom: 10px;">
-          Welcome to Pizza Stop Alephata! By creating an account with us, you unlock our member benefits for express takeaway, highway table bookings, and food rewards.
-        </p>
-        <ul style="padding-left: 20px; margin-bottom: 10px; font-size: 0.84rem; display: flex; flex-direction: column; gap: 6px;">
+        <p style="margin-bottom:10px">Welcome to Pizza Stop Alephata! By creating an account with us, you unlock our
+          member benefits for express takeaway, highway table bookings, and food rewards.</p>
+        <ul style="padding-left:20px;margin-bottom:10px;font-size:.84rem;display:flex;flex-direction:column;gap:6px">
           <li>Your contact details are used solely for order notifications and member discounts.</li>
           <li>We never sell or disclose your personal details to third parties.</li>
           <li>Highway express pickups are prepared fresh at our Alephata outlet.</li>
         </ul>
-        <p style="font-size: 0.82rem; color: var(--c-leaf);">
-          Pune - Nashik Highway, Alephata, Maharashtra.
-        </p>
+        <p style="font-size:.82rem;color:var(--c-leaf)">Pune - Nashik Highway, Alephata, Maharashtra.</p>
       </div>
     </div>
   </div>
-
-  <!-- Dedicated Client-Side Authentication Script -->
   <script src="./js/auth.js"></script>
 </body>
+
 </html>
