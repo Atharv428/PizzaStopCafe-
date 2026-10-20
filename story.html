@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story - Pizza Stop Alephata | Made with Love, Served with Passion</title>
+
+  <!-- SEO Optimization Meta Tags -->
+  <meta name="description"
+    content="Discover the story of Pizza Stop Alephata along the Pune-Nashik Highway. Made with love and served with passion, bringing friends, families, and food lovers together over artisan pizzas, fresh ingredients, and genuine hospitality.">
+  <meta name="theme-color" content="#163B2B">
+
+  <!-- Manifest & Favicon -->
+  <link rel="icon" type="image/jpeg" href="./Logo/logo.jpeg">
+
+  <!-- Google Fonts: Cinzel, Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Dedicated Cafe Story Stylesheet -->
+  <link rel="stylesheet" href="./css/story.css?v=8">
+
+  <!-- Immediate Theme Loader (prevents flash of incorrect theme) -->
+  <script>
+    (function () {
+      const valid = ['cyan-purple', 'orange-cream', 'lime-violet'];
+      const saved = localStorage.getItem('pizzastop_theme');
+      const theme = valid.includes(saved) ? saved : 'cyan-purple';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Ambient Particles Atmosphere -->
+  <div class="story-bg-particles"></div>
+
+  <!-- Top Floating Navigation Bar -->
+  <header class="top-nav-bar" role="banner">
+    <div class="brand-nav-link">
+      <img src="./Logo/logo.jpeg" alt="Pizza Stop Alephata Logo" class="brand-logo-img" width="54" height="54">
+      <div class="brand-nav-meta">
+        <span class="brand-nav-name">Pizza Stop Alephata</span>
+        <span class="brand-nav-badge">Pune - Nashik Highway Oasis</span>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <!-- Theme Palette Picker -->
+      <div class="theme-palette-picker" id="themePalettePicker">
+        <button class="theme-picker-btn" id="themePickerBtn" title="Change Website Color Palette"
+          aria-label="Change Website Color Palette">
+          <i class="fas fa-palette"></i>
+          <span class="theme-active-label">Electric Cyan</span>
+          <i class="fas fa-chevron-down caret-icon"></i>
+        </button>
+        <div class="theme-dropdown-menu" id="themeDropdownMenu">
+          <button class="theme-option-btn active" data-theme-val="cyan-purple" type="button">
+            <span class="swatch swatch-cyan-purple"></span>
+            <span>Electric Cyan + Neon Purple</span>
+          </button>
+          <button class="theme-option-btn" data-theme-val="orange-cream" type="button">
+            <span class="swatch swatch-orange-cream"></span>
+            <span>Hot Orange + Deep Purple</span>
+          </button>
+          <button class="theme-option-btn" data-theme-val="lime-violet" type="button">
+            <span class="swatch swatch-lime-violet"></span>
+            <span>Neon Lime + Violet</span>
+          </button>
+        </div>
+      </div>
+
+      <a href="login.html" class="nav-btn-login" id="nav-btn-login" title="Sign In to Pizza Stop">
+        <i class="fas fa-sign-in-alt"></i>
+        <span>Login</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         1. HERO SECTION: "Every Pizza Has a Story"
+         100% High Visibility Background ("increes to high see")
+         ==================================================================== -->
+    <section class="story-hero-section" id="hero" aria-label="Hero Section">
+      <div class="hero-bg-media">
+        <img src="./background/1.png" alt="Pizza Stop Alephata authentic cafe moments and artisan food showcase"
+          class="hero-bg-img">
+        <div class="hero-gradient-overlay"></div>
+        <div class="hero-vignette"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-content-main">
+          <div class="hero-eyebrow-pill">
+            <i class="fas fa-heart"></i>
+            <span>Welcome to Pizza Stop Alephata</span>
+          </div>
+
+          <h1 class="hero-title">
+            Every Pizza Has a <span>Story.</span>
+          </h1>
+        </div>
+
+        <div class="hero-content-meta">
+          <p class="hero-tagline">
+            Born from a passion for artisan food, warm conversations, and genuine hospitality along the Pune-Nashik
+            Highway. Step in, unwind, and discover the heartfelt craft behind every single slice.
+          </p>
+
+          <a href="#our-story" class="hero-scroll-cue" aria-label="Scroll down to read our story">
+            <span>Discover Our Journey</span>
+            <div class="hero-scroll-icon">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         2. OUR STORY SECTION: "Our Story — Made with Love, Served with Passion."
+         ==================================================================== -->
+    <section class="story-narrative-section" id="our-story" aria-label="Our Cafe Story">
+      <div class="container story-grid-layout">
+
+        <!-- Left Visual Collage -->
+        <div class="story-collage-wrapper">
+          <div class="collage-main-frame">
+            <img src="./background/bro.jpg"
+              alt="Cozy ambient cafe interior and lush garden dining space at Pizza Stop Alephata"
+              class="collage-main-img" loading="lazy">
+            <div class="collage-main-overlay"></div>
+            <div class="collage-main-caption">
+              <h4>The Alephata Sanctuary</h4>
+              <p>A tranquil, welcoming haven where friends, families, and travelers connect.</p>
+            </div>
+          </div>
+
+          <!-- Overlapping Secondary Card: Cozy Greenery Café Corner -->
+          <div class="collage-secondary-frame" title="Cozy Greenery Café Corner at Pizza Stop Alephata">
+            <img src="./background/Cozy Greenery Café Corner.png"
+              alt="Cozy Greenery Café Corner with hanging ivy vines and warm glow at Pizza Stop Alephata"
+              class="collage-secondary-img" loading="lazy">
+            <div class="collage-secondary-badge">
+              <i class="fas fa-leaf"></i>
+              <span>Cozy Greenery Corner</span>
+            </div>
+          </div>
+
+          <!-- Overlapping Floating Badge -->
+          <div class="collage-overlap-badge">
+            <div class="overlap-icon">
+              <i class="fas fa-pizza-slice"></i>
+            </div>
+            <div class="overlap-text">
+              <h5>Artisan Craft</h5>
+              <p>Fresh Dough &amp; Pure Mozzarella</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Narrative Story -->
+        <div class="story-text-wrapper">
+          <div class="section-label-eyebrow">
+            <i class="fas fa-leaf"></i>
+            <span>Our Heart &amp; Soul</span>
+          </div>
+
+          <h2 class="story-heading-primary">
+            Our Story — <span>Made with Love,</span> Served with Passion.
+          </h2>
+
+          <p class="story-lead-paragraph">
+            At Pizza Stop Alephata, we believe food is more than just a meal — it is an invitation to pause, share a
+            smile, and celebrate the moments that matter most.
+          </p>
+
+          <p class="story-body-paragraph">
+            Our journey began with a heartfelt passion for authentic flavours and handcrafted food. Nestled along the
+            bustling Pune-Nashik Highway in Alephata, we set out to create a warm, inviting oasis where travelers taking
+            a road break, local families gathering for celebrations, and friends catching up can all feel right at home.
+          </p>
+
+          <p class="story-body-paragraph">
+            Every pizza that leaves our kitchen starts with fresh dough kneaded daily, layered with rich house-blended
+            sauces, 100% pure dairy mozzarella, and vibrant garden-fresh vegetables. We never cut corners, because we
+            believe true culinary joy comes from honest ingredients, patient baking, and genuine attention to every
+            detail.
+          </p>
+
+          <div class="story-quote-card">
+            “When you cook with real love, people don’t just taste the food — they feel the warmth behind it.”
+          </div>
+
+          <p class="story-body-paragraph">
+            Our vision is simple yet profound: to be Alephata’s favourite food destination — a place known not only for
+            unforgettable pizzas, gourmet burgers, and creamy cold coffees, but for the smiles, memories, and warm
+            hospitality that greet you every time you walk through our doors.
+          </p>
+
+          <div class="story-pills-row">
+            <div class="story-pill-item">
+              <i class="fas fa-seedling"></i>
+              <span>Farm-Fresh Toppings</span>
+            </div>
+            <div class="story-pill-item">
+              <i class="fas fa-fire"></i>
+              <span>Stone-Baked Perfection</span>
+            </div>
+            <div class="story-pill-item">
+              <i class="fas fa-users"></i>
+              <span>Family &amp; Highway Haven</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CAFE VIDEO SHOWCASE SECTION: "Feel the Energy & Warmth"
+         ==================================================================== -->
+    <section class="story-video-section" id="cafe-video" aria-label="Cafe Video Showcase">
+      <div class="container story-video-grid">
+
+        <!-- Left Column: Video Story Narrative -->
+        <div class="video-info-box">
+          <div class="section-label-eyebrow">
+            <i class="fas fa-play-circle"></i>
+            <span>Life at Pizza Stop</span>
+          </div>
+
+          <h2 class="video-heading">
+            Feel the <span>Energy &amp; Warmth</span> in Every Visit.
+          </h2>
+
+          <p class="video-lead-text">
+            From spontaneous road trips along the Pune-Nashik Highway to anniversary toasts, birthdays, and
+            laughter-filled evenings with friends — experience the vibrant atmosphere that makes Pizza Stop Alephata so
+            special.
+          </p>
+
+          <div class="video-perks-list">
+            <div class="video-perk-item">
+              <div class="video-perk-icon">
+                <i class="fas fa-mug-hot"></i>
+              </div>
+              <span>Lively highway hangout with cozy, inviting indoor &amp; outdoor seating</span>
+            </div>
+
+            <div class="video-perk-item">
+              <div class="video-perk-icon">
+                <i class="fas fa-pizza-slice"></i>
+              </div>
+              <span>Artisan stone-baked pizzas, signature cold coffees, and gourmet sides</span>
+            </div>
+
+            <div class="video-perk-item">
+              <div class="video-perk-icon">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <span>Captured and tagged by real highway travelers: @CAFE.PIZZASTOP_ALEPHATA</span>
+            </div>
+          </div>
+
+          <a href="#our-values" class="btn-primary-action">
+            <span>Explore Our Four Pillars</span>
+            <i class="fas fa-arrow-down"></i>
+          </a>
+        </div>
+
+        <!-- Right Column: Interactive Video Player Device Frame -->
+        <div class="video-player-wrapper">
+          <div class="video-phone-frame" title="Click anywhere to play/pause video">
+
+            <!-- Video Tag with Poster from video folder -->
+            <video id="cafeStoryVideo" class="cafe-story-video" poster="./video/thumb.jpg" preload="metadata"
+              playsinline loop muted>
+              <source src="./video/snapgram.io_iclpdlznzt4f.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+
+            <!-- Instagram Badge Tag -->
+            <div class="video-overlay-badge">
+              <i class="fab fa-instagram"></i>
+              <span>@CAFE.PIZZASTOP_ALEPHATA</span>
+            </div>
+
+            <!-- Big Center Play Button Overlay -->
+            <div class="video-action-overlay">
+              <button type="button" class="btn-video-play" id="btnVideoPlay" aria-label="Play Cafe Video">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+
+            <!-- Sound Mute/Unmute Toggle Button -->
+            <button type="button" class="btn-video-sound" id="btnVideoSound" aria-label="Unmute sound"
+              title="Toggle Sound">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CAFE AMBIANCE SECTION: "Cozy Greenery Café Corner"
+         ==================================================================== -->
+    <section class="story-ambiance-section" id="cozy-corner" aria-label="Cozy Greenery Cafe Corner">
+      <div class="container story-ambiance-grid">
+
+        <!-- Left Column: High-Res Photo Showcase Frame -->
+        <div class="ambiance-photo-wrapper">
+          <div class="ambiance-photo-frame">
+            <img src="./background/Cozy Greenery Café Corner.png"
+              alt="Cozy Greenery Café Corner with hanging ivy vines, heart art wall, and glowing pendant lights at Pizza Stop Alephata"
+              class="ambiance-showcase-img" loading="lazy">
+            <div class="ambiance-photo-overlay"></div>
+            <div class="ambiance-photo-tag-pill">
+              <i class="fas fa-heart"></i>
+              <span>Found my happy corner ❣️🍕 @cafe.pizzastop_alephata</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Atmosphere & Ambiance Narrative -->
+        <div class="ambiance-info-box">
+          <div class="section-label-eyebrow">
+            <i class="fas fa-leaf"></i>
+            <span>Cafe Atmosphere &amp; Vibe</span>
+          </div>
+
+          <h2 class="ambiance-heading">
+            Step Into Our <span>Cozy Greenery Corner.</span>
+          </h2>
+
+          <p class="ambiance-lead-text">
+            A lush, tranquil haven designed for slow highway pauses, heartfelt conversations, and cheerful celebrations.
+            Surrounded by cascading green ivy, soft golden filament rope lighting, and hand-drawn heart art — every
+            corner is crafted to make you feel right at home.
+          </p>
+
+          <div class="ambiance-perks-list">
+            <div class="ambiance-perk-item">
+              <div class="ambiance-perk-icon">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <div class="ambiance-perk-text">
+                <h4>Lush Ivy Canopy &amp; Plants</h4>
+                <p>Natural green ceiling foliage creating a refreshing, soothing oasis from your highway journey.</p>
+              </div>
+            </div>
+
+            <div class="ambiance-perk-item">
+              <div class="ambiance-perk-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <div class="ambiance-perk-text">
+                <h4>Warm Filament Rope Lighting</h4>
+                <p>Rustic pendant bulbs casting an intimate, golden glow over comfortable dining tables.</p>
+              </div>
+            </div>
+
+            <div class="ambiance-perk-item">
+              <div class="ambiance-perk-icon">
+                <i class="fas fa-camera-retro"></i>
+              </div>
+              <div class="ambiance-perk-text">
+                <h4>The Alephata Heart-Art Wall</h4>
+                <p>A beloved highway photo spot where food lovers tag and celebrate memorable moments.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ambiance-actions">
+            <a href="#our-values" class="btn-primary-action">
+              <span>Explore Our Four Pillars</span>
+              <i class="fas fa-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. OUR VALUES SECTION: Freshness, Quality, Hospitality, Great Taste
+         ==================================================================== -->
+    <section class="story-values-section" id="our-values" aria-label="Our Core Values">
+      <div class="container">
+
+        <div class="section-header-centered">
+          <div class="section-label-eyebrow">
+            <i class="fas fa-compass"></i>
+            <span>What Guides Us</span>
+          </div>
+          <h2>The Four Pillars of <span>Our Craft.</span></h2>
+          <p>
+            Everything we create at Pizza Stop Alephata is rooted in four timeless commitments that shape our kitchen,
+            our service, and your experience.
+          </p>
+        </div>
+
+        <div class="values-cards-grid">
+
+          <!-- Value 1: Freshness -->
+          <article class="value-card">
+            <div class="value-card-icon-box">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3 class="value-card-title">Freshness</h3>
+            <p class="value-card-desc">
+              We knead our pizza dough fresh each morning and hand-select crisp vegetables and herbs. No shortcuts, no
+              compromises — just pure, wholesome freshness in every single bite.
+            </p>
+            <div class="value-card-highlight">
+              <i class="fas fa-check-circle"></i>
+              <span>Daily Prep &bull; Farm Fresh</span>
+            </div>
+          </article>
+
+          <!-- Value 2: Quality -->
+          <article class="value-card">
+            <div class="value-card-icon-box">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3 class="value-card-title">Quality</h3>
+            <p class="value-card-desc">
+              From 100% pure dairy mozzarella to premium stone-baked ovens and signature spice blends, our culinary
+              standards ensure each recipe is consistently exceptional.
+            </p>
+            <div class="value-card-highlight">
+              <i class="fas fa-check-circle"></i>
+              <span>100% Real Dairy Cheese</span>
+            </div>
+          </article>
+
+          <!-- Value 3: Hospitality -->
+          <article class="value-card">
+            <div class="value-card-icon-box">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="value-card-title">Hospitality</h3>
+            <p class="value-card-desc">
+              More than a cafe, we are a welcoming haven. Whether you're arriving from a scenic drive or dropping by
+              with your family, you are greeted with genuine warmth and attentive care.
+            </p>
+            <div class="value-card-highlight">
+              <i class="fas fa-check-circle"></i>
+              <span>Warmth In Every Welcome</span>
+            </div>
+          </article>
+
+          <!-- Value 4: Great Taste -->
+          <article class="value-card">
+            <div class="value-card-icon-box">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <h3 class="value-card-title">Great Taste</h3>
+            <p class="value-card-desc">
+              The harmony of a golden-crisp crust, gooey molten cheese, and bursting savory toppings. We obsess over
+              flavour so that every visit leaves a delicious lasting impression.
+            </p>
+            <div class="value-card-highlight">
+              <i class="fas fa-check-circle"></i>
+              <span>Unforgettable Flavours</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. OUR PROMISE SECTION
+         ==================================================================== -->
+    <section class="story-promise-section" id="our-promise" aria-label="Our Promise to You">
+      <div class="container">
+
+        <div class="promise-card-outer">
+          <div class="promise-grid">
+
+            <div class="promise-badge-seal">
+              <i class="fas fa-certificate"></i>
+              <span>The Pizza Stop<br>Promise</span>
+            </div>
+
+            <div class="promise-text-box">
+              <div class="section-label-eyebrow" style="margin-bottom: 8px;">
+                <i class="fas fa-shield-halved"></i>
+                <span>Our Unwavering Commitment</span>
+              </div>
+              <h3>To Serve Delicious Food &amp; Make <span>Every Visit Special.</span></h3>
+              <p>
+                Whenever you step into Pizza Stop Alephata, our promise to you is steadfast: you will always receive
+                hot, freshly prepared food crafted with passion, uncompromised hygiene, and radiant hospitality. We
+                consider it our privilege to be part of your celebrations, your quiet highway pauses, and your shared
+                family laughter.
+              </p>
+              <div class="promise-pillars-list">
+                <div class="promise-pillar-item">
+                  <i class="fas fa-check-double"></i>
+                  <span>Crafted Fresh to Order</span>
+                </div>
+                <div class="promise-pillar-item">
+                  <i class="fas fa-smile"></i>
+                  <span>Welcoming Cafe Ambiance</span>
+                </div>
+                <div class="promise-pillar-item">
+                  <i class="fas fa-sparkles"></i>
+                  <span>Memorable Highway Moments</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. CLOSING SECTION: "Good Food. Great Moments. That's Pizza Stop Alephata."
+         ==================================================================== -->
+    <section class="story-closing-section" id="closing" aria-label="Closing Thoughts">
+      <div class="container">
+
+        <div class="closing-emblem">
+          <i class="fas fa-fire-burner"></i>
+        </div>
+
+        <h2 class="closing-heading">
+          “Good Food. Great Moments. <span>That's Pizza Stop Alephata.”</span>
+        </h2>
+
+        <p class="closing-subtext">
+          Come experience the aroma of stone-baked crusts, the comfort of lush green surroundings, and the joy of honest
+          food served straight from the heart.
+        </p>
+
+        <div class="closing-actions-row">
+          <a href="#hero" class="btn-primary-action">
+            <i class="fas fa-arrow-up"></i>
+            <span>Back to Top</span>
+          </a>
+          <a href="#our-values" class="btn-secondary-action">
+            <i class="fas fa-compass"></i>
+            <span>Explore Our Values</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Brand Footer -->
+  <footer class="story-footer" role="contentinfo">
+    <div class="container">
+      <p>
+        <span>&copy; Pizza Stop Alephata. Pune - Nashik Highway, Alephata, Maharashtra.</span>
+        <span>&bull; Handcrafted with love &amp; served with passion.</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Story Interactivity & Palette Switcher -->
+  <script src="./js/story.js?v=2"></script>
+</body>
+
+</html>

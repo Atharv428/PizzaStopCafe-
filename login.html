@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Pizza Stop Alephata | Welcome Back, Food Lover!</title>
+
+  <!-- SEO Optimization Meta Tags -->
+  <meta name="description" content="Sign in to your member account at Pizza Stop Alephata on Pune-Nashik Highway. Access express pizza ordering, table reservations, and rewards.">
+  <meta name="theme-color" content="#163B2B">
+
+  <!-- Manifest & Favicon -->
+  <link rel="icon" type="image/jpeg" href="./Logo/logo.jpeg">
+
+  <!-- Google Fonts: Cinzel, Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Dedicated Cafe Auth Stylesheet -->
+  <link rel="stylesheet" href="./css/auth.css?v=6">
+
+  <!-- Immediate Theme Loader (prevents flash of incorrect theme) -->
+  <script>
+    (function () {
+      const valid = ['cyan-purple', 'orange-cream', 'lime-violet'];
+      const saved = localStorage.getItem('pizzastop_theme');
+      const theme = valid.includes(saved) ? saved : 'cyan-purple';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Ambient Particles Layer -->
+  <div class="auth-bg-particles"></div>
+
+  <!-- Top Floating Navigation Bar -->
+  <nav class="top-nav-bar" aria-label="Brand Navigation">
+    <div class="brand-nav-link">
+      <img src="./Logo/logo.jpeg" alt="Pizza Stop Alephata Logo" class="brand-logo-img" width="54" height="54">
+      <div class="brand-nav-meta">
+        <span class="brand-nav-name">Pizza Stop Alephata</span>
+        <span class="brand-nav-badge">Pune - Nashik Highway Oasis</span>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <a href="story.html" class="nav-badge-pill" title="Back to Pizza Stop Story">
+        <i class="fas fa-arrow-left"></i>
+        <span>Story</span>
+      </a>
+
+      <!-- Navigation between Login and Register only -->
+      <a href="register.html" class="btn-nav-switch" id="nav-goto-register" title="Create a new account">
+        <i class="fas fa-user-plus"></i>
+        <span>Create Account</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Split-Screen Authentication Container -->
+  <main class="auth-page-wrapper">
+    <div class="auth-split-container">
+
+      <!-- Left Panel: Cinematic Food Photography Showcase -->
+      <section class="auth-showcase-panel" aria-label="Pizza Stop Alephata Culinary Highlights">
+        <img 
+          src="./assets/food-hero.jpg" 
+          alt="Artisan Pizza, Gourmet Burgers, and Cold Coffee at Pizza Stop Alephata" 
+          class="showcase-bg-image" 
+          id="showcase-active-img"
+        >
+        <div class="showcase-gradient-overlay"></div>
+        <div class="showcase-mesh-tint"></div>
+
+        <div class="showcase-content-top">
+          <div class="showcase-rating-pill">
+            <i class="fas fa-star"></i>
+            <span>4.9 / 5.0 (1,200+ Highway Foodies)</span>
+          </div>
+        </div>
+
+        <div class="showcase-content-bottom">
+          <div class="showcase-badge-pill">
+            <i class="fas fa-fire-burner"></i> Handcrafted Daily in Alephata
+          </div>
+          
+          <h2 class="showcase-heading" id="showcase-heading-text">
+            Stone-Baked Pizza, Gourmet Burgers &amp; <span>Cold Coffee.</span>
+          </h2>
+          
+          <p class="showcase-desc">
+            Whether pausing along the scenic Pune-Nashik highway or gathering with loved ones, savour pure culinary warmth crafted fresh to order.
+          </p>
+
+          <div class="showcase-features-grid">
+            <div class="showcase-feat-item">
+              <i class="fas fa-pizza-slice"></i>
+              <span>100% Real Dairy Mozzarella</span>
+            </div>
+            <div class="showcase-feat-item">
+              <i class="fas fa-mug-hot"></i>
+              <span>Signature Cold &amp; Hot Brews</span>
+            </div>
+            <div class="showcase-feat-item">
+              <i class="fas fa-motorcycle"></i>
+              <span>Highway Express Takeaway</span>
+            </div>
+            <div class="showcase-feat-item">
+              <i class="fas fa-gift"></i>
+              <span>Exclusive Member Privileges</span>
+            </div>
+          </div>
+
+          <div class="showcase-slider-dots">
+            <div class="slider-dot active" data-img="./assets/food-hero.jpg" data-title="Stone-Baked Pizza, Gourmet Burgers &amp; <span>Cold Coffee.</span>" title="Gourmet Feast"></div>
+            <div class="slider-dot" data-img="./assets/pizza-closeup.jpg" data-title="Artisan Woodfired Crusts &amp; <span>Melted Mozzarella.</span>" title="Artisan Pizza"></div>
+            <div class="slider-dot" data-img="./assets/add-ons/Cheese Burst Pizza Pull.png" data-title="Cheese Burst Indulgence &amp; <span>Highway Flavours.</span>" title="Cheese Burst"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Panel: Authentication Form Card -->
+      <section class="auth-form-panel" aria-label="Sign In">
+        
+        <!-- Cafe Brand Header -->
+        <div class="auth-header-block">
+          <div class="auth-brand-emblem">
+            <div class="auth-emblem-icon">
+              <i class="fas fa-pizza-slice"></i>
+            </div>
+            <span class="auth-brand-title">Pizza Stop Alephata</span>
+          </div>
+          <h1 class="auth-heading">Welcome Back, Food Lover!</h1>
+          <p class="auth-subtitle">Sign in to enjoy delicious artisan pizzas, express ordering, and member perks.</p>
+        </div>
+
+        <!-- Mode Indicator Switch -->
+        <div class="auth-page-indicator" role="navigation" aria-label="Account Views">
+          <span class="auth-page-tab active">
+            <i class="fas fa-sign-in-alt"></i> Sign In
+          </span>
+          <a href="register.html" class="auth-page-tab" id="tab-switch-register">
+            <i class="fas fa-user-plus"></i> Create Account
+          </a>
+        </div>
+
+        <!-- Global Alert Notification Banners -->
+        <div id="auth-error-alert" class="auth-banner-alert error" role="alert">
+          <i class="fas fa-exclamation-circle" style="font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;"></i>
+          <span class="alert-text"></span>
+        </div>
+        
+        <div id="auth-success-alert" class="auth-banner-alert success" role="alert">
+          <i class="fas fa-check-circle" style="font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;"></i>
+          <span class="alert-text"></span>
+        </div>
+
+        <!-- Login Form -->
+        <form id="form-login" class="auth-form" novalidate>
+          
+          <!-- Email or Mobile Number Field -->
+          <div class="form-group">
+            <label class="form-label" for="login-identity">Email or Mobile Number</label>
+            <div class="input-container">
+              <i class="fas fa-envelope input-prefix-icon"></i>
+              <input 
+                type="text" 
+                id="login-identity" 
+                class="form-input" 
+                placeholder="name@example.com or 10-digit mobile" 
+                autocomplete="username" 
+                required
+              >
+            </div>
+            <div class="field-error-hint" id="login-identity-hint">
+              <i class="fas fa-exclamation-triangle"></i> Please enter your registered email or 10-digit mobile number.
+            </div>
+          </div>
+
+          <!-- Password Field with Show/Hide Toggle -->
+          <div class="form-group">
+            <label class="form-label" for="login-password">Password</label>
+            <div class="input-container">
+              <i class="fas fa-lock input-prefix-icon"></i>
+              <input 
+                type="password" 
+                id="login-password" 
+                class="form-input" 
+                placeholder="Enter your password" 
+                autocomplete="current-password" 
+                required
+              >
+              <button type="button" class="input-toggle-btn password-toggle-btn" data-target="login-password" aria-label="Toggle password visibility">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <div class="field-error-hint" id="login-password-hint">
+              <i class="fas fa-exclamation-triangle"></i> Password cannot be empty.
+            </div>
+          </div>
+
+          <!-- Remember Me Checkbox & Forgot Password Link -->
+          <div class="form-modifiers-row">
+            <label class="checkbox-custom-label">
+              <input type="checkbox" id="login-remember" checked>
+              <span>Remember Me</span>
+            </label>
+            <a href="#" id="link-forgot-password" class="btn-link-forgot">Forgot Password?</a>
+          </div>
+
+          <!-- Login Submit Button -->
+          <button type="submit" class="btn-auth-submit" id="btn-login-submit">
+            <span class="spinner-inline"></span>
+            <span class="btn-text">Sign In to Pizza Stop</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+
+          <!-- Quick Test Demo Helper Button -->
+          <div class="auth-demo-shortcut">
+            <button type="button" class="btn-demo-quick" id="btn-demo-autofill" title="Fill test credentials in 1 click">
+              <i class="fas fa-bolt" style="color: var(--c-leaf);"></i> Quick Demo Fill
+            </button>
+          </div>
+
+          <!-- Navigation link to Create Account page -->
+          <p class="auth-footer-prompt">
+            Don't have an account? <a href="register.html" id="link-goto-register">Create an Account</a>
+          </p>
+
+        </form>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- Forgot Password Modal -->
+  <div class="modal-overlay" id="modal-forgot-password" role="dialog" aria-modal="true" aria-labelledby="forgot-title">
+    <div class="modal-dialog-card">
+      <button type="button" class="modal-close-btn" id="btn-close-forgot" aria-label="Close dialog">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-header">
+        <h3 id="forgot-title">Reset Your Password</h3>
+        <p>Enter your registered email address or mobile number and we'll send you recovery instructions.</p>
+      </div>
+      <div id="forgot-feedback-alert" class="auth-banner-alert" style="margin-bottom: 14px;"></div>
+      <form id="form-forgot-password" novalidate>
+        <div class="form-group" style="margin-bottom: 16px;">
+          <label class="form-label" for="forgot-identity">Email or Mobile Number</label>
+          <div class="input-container">
+            <i class="fas fa-envelope input-prefix-icon"></i>
+            <input type="text" id="forgot-identity" class="form-input" placeholder="name@example.com or 10-digit mobile" required>
+          </div>
+        </div>
+        <button type="submit" class="btn-auth-submit">
+          <span>Send Reset Instructions</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Dedicated Client-Side Authentication Script -->
+  <script src="./js/auth.js"></script>
+</body>
+</html>
