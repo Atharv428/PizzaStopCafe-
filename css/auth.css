@@ -1040,6 +1040,27 @@ html, body {
   flex-shrink: 0;
 }
 
+/* Authentication Footer Prompt */
+.auth-footer-prompt {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 0.88rem;
+  color: var(--c-sand-muted);
+}
+
+.auth-footer-prompt a {
+  color: var(--c-leaf);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  margin-left: 5px;
+}
+
+.auth-footer-prompt a:hover {
+  text-decoration: underline;
+  color: var(--c-cream);
+}
+
 /* Quick Fill Demo Helper */
 .auth-demo-shortcut {
   display: flex;
