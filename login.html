@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Pizza Stop Alephata | Welcome Back, Food Lover!</title>
-
-  <!-- SEO Optimization Meta Tags -->
-  <meta name="description" content="Sign in to your member account at Pizza Stop Alephata on Pune-Nashik Highway. Access express pizza ordering, table reservations, and rewards.">
+  <meta name="description"
+    content="Sign in to your member account at Pizza Stop Alephata on Pune-Nashik Highway. Access express pizza ordering, table reservations, and rewards.">
   <meta name="theme-color" content="#163B2B">
-
-  <!-- Manifest & Favicon -->
   <link rel="icon" type="image/jpeg" href="./Logo/logo.jpeg">
-
-  <!-- Google Fonts: Cinzel, Playfair Display & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome 6 Icons -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Dedicated Cafe Auth Stylesheet -->
-  <link rel="stylesheet" href="./css/auth.css?v=8">
-
-  <!-- Immediate Theme Loader (prevents flash of incorrect theme) -->
+  <link rel="stylesheet" href="./css/auth.css?v=9">
   <script>
     (function () {
       const valid = ['cyan-purple', 'orange-cream', 'lime-violet'];
@@ -33,16 +25,9 @@
     })();
   </script>
 </head>
-<body class="login-page">
 
-  <!-- Full-Page Background Photo Layer -->
-  <div class="auth-page-bg-photo"></div>
-  <div class="auth-page-bg-overlay"></div>
-
-  <!-- Ambient Particles Layer -->
+<body>
   <div class="auth-bg-particles"></div>
-
-  <!-- Top Floating Navigation Bar -->
   <nav class="top-nav-bar" aria-label="Brand Navigation">
     <div class="brand-nav-link">
       <img src="./Logo/logo.jpeg" alt="Pizza Stop Alephata Logo" class="brand-logo-img" width="54" height="54">
@@ -51,134 +36,74 @@
         <span class="brand-nav-badge">Pune - Nashik Highway Oasis</span>
       </div>
     </div>
-
     <div class="nav-actions">
-      <a href="story.html" class="nav-badge-pill" title="Back to Pizza Stop Story">
-        <i class="fas fa-arrow-left"></i>
-        <span>Story</span>
-      </a>
-
-      <!-- Navigation between Login and Register only -->
-      <a href="register.html" class="btn-nav-switch" id="nav-goto-register" title="Create a new account">
-        <i class="fas fa-user-plus"></i>
-        <span>Create Account</span>
-      </a>
+      <a href="story.html" class="nav-badge-pill" title="Back to Pizza Stop Story"><i
+          class="fas fa-arrow-left"></i><span>Story</span></a>
+      <a href="register.html" class="btn-nav-switch" id="nav-goto-register" title="Create a new account"><i
+          class="fas fa-user-plus"></i><span>Create Account</span></a>
     </div>
   </nav>
-
-  <!-- Main Authentication Container (Centered Single Card) -->
   <main class="auth-page-wrapper">
     <div class="auth-split-container auth-page-single">
-
-      <!-- Authentication Form Card -->
       <section class="auth-form-panel" aria-label="Sign In">
-        
-        <!-- Cafe Brand Header -->
         <div class="auth-header-block">
           <div class="auth-brand-emblem">
-            <div class="auth-emblem-icon">
-              <i class="fas fa-pizza-slice"></i>
-            </div>
+            <div class="auth-emblem-icon"><i class="fas fa-pizza-slice"></i></div>
             <span class="auth-brand-title">Pizza Stop Alephata</span>
           </div>
           <h1 class="auth-heading">Welcome Back, Food Lover!</h1>
           <p class="auth-subtitle">Sign in to enjoy delicious artisan pizzas, express ordering, and member perks.</p>
         </div>
-
-        <!-- Mode Indicator Switch -->
         <div class="auth-page-indicator" role="navigation" aria-label="Account Views">
-          <span class="auth-page-tab active">
-            <i class="fas fa-sign-in-alt"></i> Sign In
-          </span>
-          <a href="register.html" class="auth-page-tab" id="tab-switch-register">
-            <i class="fas fa-user-plus"></i> Create Account
-          </a>
+          <span class="auth-page-tab active"><i class="fas fa-sign-in-alt"></i> Sign In</span>
+          <a href="register.html" class="auth-page-tab" id="tab-switch-register"><i class="fas fa-user-plus"></i> Create
+            Account</a>
         </div>
-
-        <!-- Login Form -->
         <form id="form-login" class="auth-form" novalidate>
-          
-          <!-- Email or Mobile Number Field -->
           <div class="form-group">
             <label class="form-label" for="login-identity">Email or Mobile Number</label>
             <div class="input-container">
               <i class="fas fa-envelope input-prefix-icon"></i>
-              <input 
-                type="text" 
-                id="login-identity" 
-                class="form-input" 
-                placeholder="name@example.com or 10-digit mobile" 
-                autocomplete="username" 
-                required
-              >
+              <input type="text" id="login-identity" class="form-input"
+                placeholder="name@example.com or 10-digit mobile" autocomplete="username" required>
             </div>
-            <div class="field-error-hint" id="login-identity-hint">
-              <i class="fas fa-exclamation-triangle"></i> Please enter your registered email or 10-digit mobile number.
-            </div>
+            <div class="field-error-hint" id="login-identity-hint"><i class="fas fa-exclamation-triangle"></i> Please
+              enter your registered email or 10-digit mobile number.</div>
           </div>
-
-          <!-- Password Field with Show/Hide Toggle -->
           <div class="form-group">
             <label class="form-label" for="login-password">Password</label>
             <div class="input-container">
               <i class="fas fa-lock input-prefix-icon"></i>
-              <input 
-                type="password" 
-                id="login-password" 
-                class="form-input" 
-                placeholder="Enter your password" 
-                autocomplete="current-password" 
-                required
-              >
-              <button type="button" class="input-toggle-btn password-toggle-btn" data-target="login-password" aria-label="Toggle password visibility">
-                <i class="fas fa-eye"></i>
-              </button>
+              <input type="password" id="login-password" class="form-input" placeholder="Enter your password"
+                autocomplete="current-password" required>
+              <button type="button" class="input-toggle-btn password-toggle-btn" data-target="login-password"
+                aria-label="Toggle password visibility"><i class="fas fa-eye"></i></button>
             </div>
-            <div class="field-error-hint" id="login-password-hint">
-              <i class="fas fa-exclamation-triangle"></i> Password cannot be empty.
-            </div>
+            <div class="field-error-hint" id="login-password-hint"><i class="fas fa-exclamation-triangle"></i> Password
+              cannot be empty.</div>
           </div>
-
-          <!-- Remember Me Checkbox & Forgot Password Link -->
           <div class="form-modifiers-row">
-            <label class="checkbox-custom-label">
-              <input type="checkbox" id="login-remember" checked>
-              <span>Remember Me</span>
-            </label>
+            <label class="checkbox-custom-label"><input type="checkbox" id="login-remember" checked><span>Remember
+                Me</span></label>
             <a href="#" id="link-forgot-password" class="btn-link-forgot">Forgot Password?</a>
           </div>
-
-          <!-- Login Submit Button -->
-          <button type="submit" class="btn-auth-submit" id="btn-login-submit">
-            <span class="spinner-inline"></span>
-            <span class="btn-text">Sign In to Pizza Stop</span>
-            <i class="fas fa-arrow-right"></i>
-          </button>
-
-          <!-- Quick Test Demo Helper Button -->
+          <button type="submit" class="btn-auth-submit" id="btn-login-submit"><span class="spinner-inline"></span><span
+              class="btn-text">Sign In to Pizza Stop</span><i class="fas fa-arrow-right"></i></button>
           <div class="auth-demo-shortcut">
-            <button type="button" class="btn-demo-quick" id="btn-demo-autofill" title="Fill test credentials in 1 click">
-              <i class="fas fa-bolt" style="color: var(--c-leaf);"></i> Quick Demo Fill
-            </button>
+            <button type="button" class="btn-demo-quick" id="btn-demo-autofill"
+              title="Fill test credentials in 1 click"><i class="fas fa-bolt" style="color: var(--c-leaf);"></i> Quick
+              Demo Fill</button>
           </div>
-
-          <!-- Navigation link to Create Account page -->
-          <p class="auth-footer-prompt">
-            Don't have an account? <a href="register.html" id="link-goto-register">Create an Account</a>
-          </p>
-
+          <p class="auth-footer-prompt">Don't have an account? <a href="register.html" id="link-goto-register">Create an
+              Account</a></p>
         </form>
-
       </section>
     </div>
   </main>
-
-  <!-- Forgot Password Modal -->
   <div class="modal-overlay" id="modal-forgot-password" role="dialog" aria-modal="true" aria-labelledby="forgot-title">
     <div class="modal-dialog-card">
-      <button type="button" class="modal-close-btn" id="btn-close-forgot" aria-label="Close dialog">
-        <i class="fas fa-times"></i>
-      </button>
+      <button type="button" class="modal-close-btn" id="btn-close-forgot" aria-label="Close dialog"><i
+          class="fas fa-times"></i></button>
       <div class="modal-header">
         <h3 id="forgot-title">Reset Your Password</h3>
         <p>Enter your registered email address or mobile number and we'll send you recovery instructions.</p>
@@ -189,18 +114,16 @@
           <label class="form-label" for="forgot-identity">Email or Mobile Number</label>
           <div class="input-container">
             <i class="fas fa-envelope input-prefix-icon"></i>
-            <input type="text" id="forgot-identity" class="form-input" placeholder="name@example.com or 10-digit mobile" required>
+            <input type="text" id="forgot-identity" class="form-input" placeholder="name@example.com or 10-digit mobile"
+              required>
           </div>
         </div>
-        <button type="submit" class="btn-auth-submit">
-          <span>Send Reset Instructions</span>
-          <i class="fas fa-paper-plane"></i>
-        </button>
+        <button type="submit" class="btn-auth-submit"><span>Send Reset Instructions</span><i
+            class="fas fa-paper-plane"></i></button>
       </form>
     </div>
   </div>
-
-  <!-- Dedicated Client-Side Authentication Script -->
   <script src="./js/auth.js"></script>
 </body>
+
 </html>
