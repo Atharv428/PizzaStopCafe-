@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Dynamic Input Icon (Email vs Phone)
   setupIdentityDetection();
 
-  // 3. Showcase Photography Slider
+  // 3. Showcase Photography Slider & Welcome Typewriter
   setupShowcaseSlider();
+  setupWelcomeTypewriter();
 
   // 4. Login Form Validation
   setupLoginForm();
@@ -120,6 +121,65 @@ function setupShowcaseSlider() {
       }
     });
   });
+}
+
+/**
+ * PizzaStop Calligraphic Typewriter Animation for Register Page
+ */
+function setupWelcomeTypewriter() {
+  const section = document.querySelector('.pizza-welcome');
+  if (!section) return;
+
+  const line1 = section.querySelector('#welcome-line-1');
+  const line2 = section.querySelector('#welcome-line-2');
+  const cursor = section.querySelector('#welcome-cursor');
+  if (!line1 || !line2 || !cursor) return;
+
+  line1.textContent = '';
+  line2.textContent = '';
+
+  const lines = [
+    {
+      text: 'Welcome',
+      element: line1
+    },
+    {
+      text: 'to PizzaStop',
+      element: line2
+    }
+  ];
+
+  let lineIndex = 0;
+  let charIndex = 0;
+
+  line1.appendChild(cursor);
+
+  function typeLetter() {
+    if (lineIndex >= lines.length) {
+      cursor.classList.add('is-hidden');
+      return;
+    }
+
+    const current = lines[lineIndex];
+
+    if (charIndex < current.text.length) {
+      const char = current.text.charAt(charIndex);
+      const textNode = document.createTextNode(char);
+      current.element.insertBefore(textNode, cursor);
+
+      charIndex++;
+      setTimeout(typeLetter, 140);
+    } else {
+      lineIndex++;
+      charIndex = 0;
+      if (lineIndex < lines.length) {
+        lines[lineIndex].element.appendChild(cursor);
+      }
+      setTimeout(typeLetter, 300);
+    }
+  }
+
+  typeLetter();
 }
 
 /**

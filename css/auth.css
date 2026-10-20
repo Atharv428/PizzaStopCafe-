@@ -353,6 +353,76 @@ html, body {
 }
 
 /* ==========================================================================
+   LEFT PANEL: PIZZASTOP WELCOME CALLIGRAPHIC TYPEWRITER SECTION
+   ========================================================================== */
+.pizza-welcome {
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+  padding: 45px 36px;
+  background: #fff5ed;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.pizza-welcome .welcome-title {
+  margin: 0;
+  color: #a93226;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(45px, 6.5vw, 85px);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 1px;
+}
+
+.pizza-welcome .welcome-line {
+  display: block;
+  min-height: 1.25em;
+  white-space: nowrap;
+}
+
+.pizza-welcome #welcome-line-2 {
+  margin-left: clamp(25px, 6vw, 90px);
+}
+
+.pizza-welcome .typing-cursor {
+  display: inline-block;
+  color: #e67e22;
+  font-family: sans-serif;
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 300;
+  line-height: 1;
+  animation: pizza-cursor-blink 0.7s infinite;
+  margin-left: 6px;
+  vertical-align: baseline;
+}
+
+.pizza-welcome .typing-cursor.is-hidden {
+  display: none;
+}
+
+@keyframes pizza-cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .pizza-welcome {
+    padding: 30px 20px;
+    min-height: 200px;
+  }
+
+  .pizza-welcome .welcome-title {
+    font-size: clamp(38px, 10vw, 55px);
+  }
+}
+
+/* ==========================================================================
    LEFT PANEL: CINEMATIC FOOD PHOTOGRAPHY SHOWCASE
    ========================================================================== */
 .auth-showcase-panel {

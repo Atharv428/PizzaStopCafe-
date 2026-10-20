@@ -12,10 +12,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="./css/auth.css?v=13">
+  <link rel="stylesheet" href="./css/auth.css?v=14">
   <script>
     (function () {
       const valid = ['cyan-purple', 'orange-cream', 'lime-violet'];
@@ -46,39 +46,13 @@
   </nav>
   <main class="auth-page-wrapper">
     <div class="auth-split-container">
-      <section class="auth-showcase-panel" aria-label="Pizza Stop Alephata Membership Privileges">
-        <img src="./assets/pizza-closeup.jpg" alt="Freshly baked artisan cheese burst pizza at Pizza Stop Alephata"
-          class="showcase-bg-image" id="showcase-active-img">
-        <div class="showcase-gradient-overlay"></div>
-        <div class="showcase-mesh-tint"></div>
-        <div class="showcase-content-top">
-          <div class="showcase-rating-pill"><i class="fas fa-crown"></i><span>Join 5,000+ Highway Foodies</span></div>
-        </div>
-        <div class="showcase-content-bottom">
-          <div class="showcase-badge-pill"><i class="fas fa-sparkles"></i> Exclusive Member Perks</div>
-          <h2 class="showcase-heading" id="showcase-heading-text">Unlock Highway Treats, Secret Crusts &amp;
-            <span>Instant Perks.</span></h2>
-          <p class="showcase-desc">Become part of the Pizza Stop Alephata family. Receive personalized order discounts,
-            faster highway takeaways, and birthday celebration surprises.</p>
-          <div class="showcase-features-grid">
-            <div class="showcase-feat-item"><i class="fas fa-pizza-slice"></i><span>Instant Welcome Treat</span></div>
-            <div class="showcase-feat-item"><i class="fas fa-bolt"></i><span>Express Highway Pickup</span></div>
-            <div class="showcase-feat-item"><i class="fas fa-coins"></i><span>Cheesy Reward Coins</span></div>
-            <div class="showcase-feat-item"><i class="fas fa-chair"></i><span>Priority Table Reservations</span></div>
-          </div>
-          <div class="showcase-slider-dots">
-            <div class="slider-dot active" data-img="./assets/pizza-closeup.jpg"
-              data-title="Unlock Highway Treats, Secret Crusts &amp; <span>Instant Perks.</span>" title="Artisan Pizza">
-            </div>
-            <div class="slider-dot" data-img="./assets/food-hero.jpg"
-              data-title="Stone-Baked Pizza, Gourmet Burgers &amp; <span>Cold Coffee.</span>" title="Gourmet Feast">
-            </div>
-            <div class="slider-dot" data-img="./assets/add-ons/Cheese Burst Pizza Pull.png"
-              data-title="Cheese Burst Indulgence &amp; <span>Highway Flavours.</span>" title="Cheese Burst"></div>
-            <div class="slider-dot" data-img="./background/Romantic Ivy Café Interior.png"
-              data-title="Romantic Ivy Café, Warm Ambience &amp; <span>Highway Oasis.</span>" title="Romantic Ivy Café"></div>
-          </div>
-        </div>
+      <!-- PizzaStop welcome section -->
+      <section class="pizza-welcome" aria-label="Welcome to PizzaStop">
+        <h1 class="welcome-title">
+          <span class="welcome-line" id="welcome-line-1"></span>
+          <span class="welcome-line" id="welcome-line-2"></span>
+        </h1>
+        <span class="typing-cursor" id="welcome-cursor">|</span>
       </section>
       <section class="auth-form-panel" aria-label="Create Account">
         <div class="auth-header-block">
@@ -190,7 +164,7 @@
       </div>
     </div>
   </div>
-  <script src="./js/auth.js?v=13"></script>
+  <script src="./js/auth.js?v=14"></script>
 </body>
 
 </html>
