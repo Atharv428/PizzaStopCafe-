@@ -8,42 +8,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root, [data-theme="cyan-purple"] {
-  /* Option 1: Electric Cyan + Neon Purple (Pale Pink #FCE4EC Background) */
-  --c-bg-canvas: #FCE4EC;
-  --c-bg-canvas-alt: #F8BBD0;
-  --c-bg-card: rgba(255, 255, 255, 0.94);
-  --c-bg-card-hover: rgba(255, 255, 255, 1);
+  /* Option 1: Lavender + Light Blue (#EADCFD + #D7E9FF) - Trendy • Soft • Premium */
+  --c-bg-canvas: #EADCFD; /* Lavender */
+  --c-bg-canvas-alt: #D7E9FF; /* Light Blue */
+  --c-bg-card: rgba(255, 255, 239, 0.94); /* #FFFFEF White */
+  --c-bg-card-hover: #FFFFEF;
   --c-bg-card-solid: #FFFFFF;
-  --c-bg-glass: rgba(255, 255, 255, 0.95);
-  --c-bg-pill: rgba(139, 92, 246, 0.12);
+  --c-bg-glass: rgba(245, 247, 255, 0.94); /* #F5F7FF Soft White */
+  --c-bg-pill: rgba(234, 220, 253, 0.45);
 
   /* Primary Brand Accents */
-  --c-forest: #7C3AED; /* Neon Purple */
-  --c-forest-dark: #6D28D9;
-  --c-forest-light: #8B5CF6;
-  --c-jungle: #06B6D4;
-  --c-leaf: #0284C7; /* Electric Cyan/Sky */
-  --c-leaf-light: #00F5FF;
-  --c-leaf-glow: rgba(0, 245, 255, 0.35);
+  --c-forest: #7C5CE8; /* Lavender accent */
+  --c-forest-dark: #6444D8;
+  --c-forest-light: #9B80F4;
+  --c-jungle: #388EE8; /* Light Blue accent */
+  --c-leaf: #0284C7;
+  --c-leaf-light: #38BDF8;
+  --c-leaf-glow: rgba(215, 233, 255, 0.55);
 
   /* Highlights & Text */
-  --c-cream: #18122B;
-  --c-cream-soft: #261E3E;
-  --c-sand: #312A4A;
-  --c-sand-dark: #4B4268;
-  --c-gold: #7C3AED;
-  --c-gold-glow: rgba(139, 92, 246, 0.25);
+  --c-cream: #1C2042;
+  --c-cream-soft: #272C54;
+  --c-sand: #32375C;
+  --c-sand-dark: #474E78;
+  --c-gold: #7C5CE8;
+  --c-gold-glow: rgba(124, 92, 232, 0.25);
 
   /* Typography */
-  --c-text-primary: #18122B;
-  --c-text-secondary: #312A4A;
-  --c-text-muted: #645C80;
-  --c-text-dim: #847C9E;
+  --c-text-primary: #1C2042;
+  --c-text-secondary: #32375C;
+  --c-text-muted: #5C6288;
+  --c-text-dim: #7E84AA;
 
   /* Card Borders & Dividers */
-  --c-border: rgba(124, 58, 237, 0.20);
-  --c-border-subtle: rgba(124, 58, 237, 0.10);
-  --c-border-hover: rgba(2, 132, 199, 0.50);
+  --c-border: rgba(124, 92, 232, 0.20);
+  --c-border-subtle: rgba(124, 92, 232, 0.10);
+  --c-border-hover: rgba(56, 142, 232, 0.50);
 
   /* Ambient Accents */
   --c-ambient-1: rgba(139, 92, 246, 0.08);
@@ -73,14 +73,14 @@
   --transition-smooth: 0.35s cubic-bezier(0.25, 1, 0.35, 1);
 }
 
-/* Option 2: Hot Orange + Warm Cream + Deep Purple (Pale Pink #FCE4EC Background) */
+/* Option 2: Hot Orange + Warm Cream + Deep Purple (Lavender + Light Blue Canvas) */
 [data-theme="orange-cream"] {
-  --c-bg-canvas: #FCE4EC;
-  --c-bg-canvas-alt: #F8BBD0;
-  --c-bg-card: rgba(255, 255, 255, 0.94);
-  --c-bg-card-hover: rgba(255, 255, 255, 1);
+  --c-bg-canvas: #EADCFD;
+  --c-bg-canvas-alt: #D7E9FF;
+  --c-bg-card: rgba(255, 255, 239, 0.94);
+  --c-bg-card-hover: #FFFFEF;
   --c-bg-card-solid: #FFFFFF;
-  --c-bg-glass: rgba(255, 255, 255, 0.95);
+  --c-bg-glass: rgba(245, 247, 255, 0.94);
   --c-bg-pill: rgba(255, 107, 53, 0.12);
 
   --c-forest: #301044; /* Deep Purple */
@@ -112,14 +112,14 @@
   --shadow-glow: 0 0 32px rgba(255, 107, 53, 0.22);
 }
 
-/* Option 3: Neon Lime + Violet (Pale Pink #FCE4EC Background) */
+/* Option 3: Neon Lime + Violet (Lavender + Light Blue Canvas) */
 [data-theme="lime-violet"] {
-  --c-bg-canvas: #FCE4EC;
-  --c-bg-canvas-alt: #F8BBD0;
-  --c-bg-card: rgba(255, 255, 255, 0.94);
-  --c-bg-card-hover: rgba(255, 255, 255, 1);
+  --c-bg-canvas: #EADCFD;
+  --c-bg-canvas-alt: #D7E9FF;
+  --c-bg-card: rgba(255, 255, 239, 0.94);
+  --c-bg-card-hover: #FFFFEF;
   --c-bg-card-solid: #FFFFFF;
-  --c-bg-glass: rgba(255, 255, 255, 0.95);
+  --c-bg-glass: rgba(245, 247, 255, 0.94);
   --c-bg-pill: rgba(109, 40, 217, 0.12);
 
   --c-forest: #6D28D9; /* Violet */
@@ -167,6 +167,13 @@ body {
   min-height: 100%;
   font-family: var(--font-sans);
   background-color: var(--c-bg-canvas);
+  background-image:
+    radial-gradient(at 10% 15%, var(--c-bg-canvas) 0px, transparent 60%),
+    radial-gradient(at 90% 10%, var(--c-bg-canvas-alt) 0px, transparent 60%),
+    radial-gradient(at 50% 50%, #F5F7FF 0px, transparent 65%),
+    radial-gradient(at 85% 85%, var(--c-bg-canvas) 0px, transparent 60%),
+    radial-gradient(at 15% 90%, var(--c-bg-canvas-alt) 0px, transparent 60%);
+  background-attachment: fixed;
   color: var(--c-text-secondary);
   line-height: 1.7;
   overflow-x: hidden;
@@ -472,8 +479,8 @@ body {
   z-index: 2;
   background: linear-gradient(
     180deg,
-    rgba(252, 228, 236, 0.35) 0%,
-    rgba(252, 228, 236, 0.05) 15%,
+    rgba(234, 220, 253, 0.35) 0%,
+    rgba(215, 233, 255, 0.05) 15%,
     transparent 28%,
     transparent 72%,
     var(--c-bg-canvas) 100%

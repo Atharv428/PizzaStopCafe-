@@ -8,12 +8,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root, [data-theme="cyan-purple"] {
-  /* Option 1: Electric Cyan + Neon Purple (Pale Pink #FCE4EC Background) */
-  --c-forest-dark: #FCE4EC;
-  --c-forest: #F8BBD0;
-  --c-forest-card: rgba(255, 255, 255, 0.94);
-  --c-forest-input: #FFF2F7;
-  --c-forest-input-focus: #FFFFFF;
+  /* Option 1: Lavender + Light Blue (#EADCFD + #D7E9FF) */
+  --c-forest-dark: #EADCFD;
+  --c-forest: #D7E9FF;
+  --c-forest-card: rgba(255, 255, 239, 0.94);
+  --c-forest-input: #F5F7FF;
+  --c-forest-input-focus: #FFFFEF;
   --c-jungle: #7C3AED;
   --c-leaf: #0284C7;
   --c-leaf-glow: rgba(0, 245, 255, 0.35);
@@ -68,13 +68,13 @@
   --transition-smooth: 0.35s cubic-bezier(0.25, 1, 0.35, 1);
 }
 
-/* Option 2: Hot Orange + Warm Cream + Deep Purple (Pale Pink #FCE4EC Background) */
+/* Option 2: Hot Orange + Warm Cream + Deep Purple (Lavender + Light Blue Canvas) */
 [data-theme="orange-cream"] {
-  --c-forest-dark: #FCE4EC;
-  --c-forest: #F8BBD0;
-  --c-forest-card: rgba(255, 255, 255, 0.94);
-  --c-forest-input: #FFF2F7;
-  --c-forest-input-focus: #FFFFFF;
+  --c-forest-dark: #EADCFD;
+  --c-forest: #D7E9FF;
+  --c-forest-card: rgba(255, 255, 239, 0.94);
+  --c-forest-input: #F5F7FF;
+  --c-forest-input-focus: #FFFFEF;
   --c-jungle: #301044;
   --c-leaf: #E85924;
   --c-leaf-glow: rgba(255, 107, 53, 0.30);
@@ -101,13 +101,13 @@
   --shadow-glow: 0 0 32px rgba(255, 107, 53, 0.22);
 }
 
-/* Option 3: Neon Lime + Violet (Pale Pink #FCE4EC Background) */
+/* Option 3: Neon Lime + Violet (Lavender + Light Blue Canvas) */
 [data-theme="lime-violet"] {
-  --c-forest-dark: #FCE4EC;
-  --c-forest: #F8BBD0;
-  --c-forest-card: rgba(255, 255, 255, 0.94);
-  --c-forest-input: #FFF2F7;
-  --c-forest-input-focus: #FFFFFF;
+  --c-forest-dark: #EADCFD;
+  --c-forest: #D7E9FF;
+  --c-forest-card: rgba(255, 255, 239, 0.94);
+  --c-forest-input: #F5F7FF;
+  --c-forest-input-focus: #FFFFEF;
   --c-jungle: #6D28D9;
   --c-leaf: #4D7C0F;
   --c-leaf-glow: rgba(109, 40, 217, 0.25);
@@ -145,6 +145,13 @@ html, body {
   min-height: 100%;
   font-family: var(--font-sans);
   background-color: var(--c-forest-dark);
+  background-image:
+    radial-gradient(at 10% 15%, var(--c-forest-dark) 0px, transparent 60%),
+    radial-gradient(at 90% 10%, var(--c-forest) 0px, transparent 60%),
+    radial-gradient(at 50% 50%, #F5F7FF 0px, transparent 65%),
+    radial-gradient(at 85% 85%, var(--c-forest-dark) 0px, transparent 60%),
+    radial-gradient(at 15% 90%, var(--c-forest) 0px, transparent 60%);
+  background-attachment: fixed;
   color: var(--c-sand);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
