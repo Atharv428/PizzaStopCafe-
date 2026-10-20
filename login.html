@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Dedicated Cafe Auth Stylesheet -->
-  <link rel="stylesheet" href="./css/auth.css?v=7">
+  <link rel="stylesheet" href="./css/auth.css?v=8">
 
   <!-- Immediate Theme Loader (prevents flash of incorrect theme) -->
   <script>
@@ -33,7 +33,11 @@
     })();
   </script>
 </head>
-<body>
+<body class="login-page">
+
+  <!-- Full-Page Background Photo Layer -->
+  <div class="auth-page-bg-photo"></div>
+  <div class="auth-page-bg-overlay"></div>
 
   <!-- Ambient Particles Layer -->
   <div class="auth-bg-particles"></div>
@@ -62,21 +66,11 @@
     </div>
   </nav>
 
-  <!-- Main Split-Screen Authentication Container -->
+  <!-- Main Authentication Container (Centered Single Card) -->
   <main class="auth-page-wrapper">
-    <div class="auth-split-container">
+    <div class="auth-split-container auth-page-single">
 
-      <!-- Left Panel: Cinematic Food Photography Showcase -->
-      <section class="auth-showcase-panel" aria-label="Pizza Stop Alephata Culinary Highlights">
-        <img 
-          src="./video/login.jpeg" 
-          alt="Artisan Heart-Shaped Pizza and Romantic Dining at Pizza Stop Alephata" 
-          class="showcase-bg-image" 
-          id="showcase-active-img"
-        >
-      </section>
-
-      <!-- Right Panel: Authentication Form Card -->
+      <!-- Authentication Form Card -->
       <section class="auth-form-panel" aria-label="Sign In">
         
         <!-- Cafe Brand Header -->

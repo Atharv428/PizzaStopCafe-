@@ -285,6 +285,49 @@ html, body {
   position: relative;
 }
 
+/* Full-page Background Photo for Login Page */
+body.login-page {
+  background: #110A14 url('../video/login.jpeg') center center / cover no-repeat fixed !important;
+}
+
+.auth-page-bg-photo {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../video/login.jpeg') center center / cover no-repeat fixed;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.auth-page-bg-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(17, 10, 20, 0.20) 0%, rgba(17, 10, 20, 0.52) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.auth-split-container.auth-page-single {
+  max-width: 520px;
+  grid-template-columns: 1fr;
+  min-height: auto;
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.40), 0 0 35px var(--c-leaf-glow);
+  border-radius: var(--radius-xl);
+}
+
+.auth-split-container.auth-page-single .auth-form-panel {
+  background: transparent;
+  padding: 46px 42px 40px;
+  max-height: none;
+}
+
 /* ==========================================================================
    LEFT PANEL: CINEMATIC FOOD PHOTOGRAPHY SHOWCASE
    ========================================================================== */
