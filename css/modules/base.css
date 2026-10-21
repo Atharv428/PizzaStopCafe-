@@ -1,0 +1,202 @@
+/* ==========================================================================
+   css/modules/base.css - Design Tokens, Palettes, Resets & Base Canvas
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root, [data-theme="cyan-purple"] {
+  /* Option 1: Lavender + Light Blue (#EADCFD + #D7E9FF) - Trendy • Soft • Premium */
+  --c-bg-canvas: #EADCFD; /* Lavender */
+  --c-bg-canvas-alt: #D7E9FF; /* Light Blue */
+  --c-bg-card: rgba(255, 255, 239, 0.94); /* #FFFFEF White */
+  --c-bg-card-hover: #FFFFEF;
+  --c-bg-card-solid: #FFFFFF;
+  --c-bg-glass: rgba(245, 247, 255, 0.94); /* #F5F7FF Soft White */
+  --c-bg-pill: rgba(234, 220, 253, 0.45);
+
+  /* Primary Brand Accents */
+  --c-forest: #7C5CE8; /* Lavender accent */
+  --c-forest-dark: #6444D8;
+  --c-forest-light: #9B80F4;
+  --c-jungle: #388EE8; /* Light Blue accent */
+  --c-leaf: #0284C7;
+  --c-leaf-light: #38BDF8;
+  --c-leaf-glow: rgba(215, 233, 255, 0.55);
+
+  /* Highlights & Text */
+  --c-cream: #1C2042;
+  --c-cream-soft: #272C54;
+  --c-sand: #32375C;
+  --c-sand-dark: #474E78;
+  --c-gold: #7C5CE8;
+  --c-gold-glow: rgba(124, 92, 232, 0.25);
+
+  /* Typography */
+  --c-text-primary: #1C2042;
+  --c-text-secondary: #32375C;
+  --c-text-muted: #5C6288;
+  --c-text-dim: #7E84AA;
+
+  /* Card Borders & Dividers */
+  --c-border: rgba(124, 92, 232, 0.20);
+  --c-border-subtle: rgba(124, 92, 232, 0.10);
+  --c-border-hover: rgba(56, 142, 232, 0.50);
+
+  /* Ambient Accents */
+  --c-ambient-1: rgba(139, 92, 246, 0.08);
+  --c-ambient-2: rgba(0, 245, 255, 0.08);
+
+  /* Typography Fonts */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-brand: 'Cinzel', 'Playfair Display', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Radii */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 18px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 14px 38px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 20px 48px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 32px rgba(139, 92, 246, 0.20);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.25, 1, 0.35, 1);
+}
+
+/* Option 2: Hot Orange + Warm Cream + Deep Purple (Lavender + Light Blue Canvas) */
+[data-theme="orange-cream"] {
+  --c-bg-canvas: #EADCFD;
+  --c-bg-canvas-alt: #D7E9FF;
+  --c-bg-card: rgba(255, 255, 239, 0.94);
+  --c-bg-card-hover: #FFFFEF;
+  --c-bg-card-solid: #FFFFFF;
+  --c-bg-glass: rgba(245, 247, 255, 0.94);
+  --c-bg-pill: rgba(255, 107, 53, 0.12);
+
+  --c-forest: #301044; /* Deep Purple */
+  --c-forest-dark: #220B30;
+  --c-forest-light: #521A73;
+  --c-jungle: #FF6B35;
+  --c-leaf: #E85924; /* Hot Orange */
+  --c-leaf-light: #FF6B35;
+  --c-leaf-glow: rgba(255, 107, 53, 0.30);
+
+  --c-cream: #250C36;
+  --c-cream-soft: #381A4C;
+  --c-sand: #3E1E54;
+  --c-sand-dark: #583270;
+  --c-gold: #FF6B35;
+  --c-gold-glow: rgba(255, 107, 53, 0.25);
+
+  --c-text-primary: #250C36;
+  --c-text-secondary: #3E1E54;
+  --c-text-muted: #6B4D80;
+  --c-text-dim: #9078A3;
+
+  --c-border: rgba(255, 107, 53, 0.22);
+  --c-border-subtle: rgba(255, 107, 53, 0.12);
+  --c-border-hover: rgba(255, 107, 53, 0.55);
+
+  --c-ambient-1: rgba(255, 107, 53, 0.08);
+  --c-ambient-2: rgba(82, 26, 115, 0.08);
+}
+
+/* Option 3: Neon Lime + Violet + Deep Charcoal */
+[data-theme="lime-violet"] {
+  --c-bg-canvas: #EADCFD;
+  --c-bg-canvas-alt: #D7E9FF;
+  --c-bg-card: rgba(255, 255, 239, 0.94);
+  --c-bg-card-hover: #FFFFEF;
+  --c-bg-card-solid: #FFFFFF;
+  --c-bg-glass: rgba(245, 247, 255, 0.94);
+  --c-bg-pill: rgba(101, 163, 13, 0.14);
+
+  --c-forest: #6D28D9; /* Violet */
+  --c-forest-dark: #4C1D95;
+  --c-forest-light: #8B5CF6;
+  --c-jungle: #4D7C0F;
+  --c-leaf: #65A30D; /* Vibrant Lime */
+  --c-leaf-light: #84CC16;
+  --c-leaf-glow: rgba(101, 163, 13, 0.25);
+
+  --c-cream: #1E1B4B;
+  --c-cream-soft: #2E2A72;
+  --c-sand: #312E81;
+  --c-sand-dark: #4338CA;
+  --c-gold: #6D28D9;
+  --c-gold-glow: rgba(109, 40, 217, 0.25);
+
+  --c-text-primary: #1E1B4B;
+  --c-text-secondary: #312E81;
+  --c-text-muted: #6B7280;
+  --c-text-dim: #9CA3AF;
+
+  --c-border: rgba(109, 40, 217, 0.20);
+  --c-border-subtle: rgba(109, 40, 217, 0.10);
+  --c-border-hover: rgba(101, 163, 13, 0.50);
+
+  --c-ambient-1: rgba(109, 40, 217, 0.08);
+  --c-ambient-2: rgba(77, 124, 15, 0.08);
+}
+
+/* Base Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100%;
+  font-family: var(--font-sans);
+  background-color: var(--c-bg-canvas);
+  background-image:
+    radial-gradient(at 10% 15%, var(--c-bg-canvas) 0px, transparent 60%),
+    radial-gradient(at 90% 10%, var(--c-bg-canvas-alt) 0px, transparent 60%),
+    radial-gradient(at 50% 50%, #F5F7FF 0px, transparent 65%),
+    radial-gradient(at 85% 85%, var(--c-bg-canvas) 0px, transparent 60%),
+    radial-gradient(at 15% 90%, var(--c-bg-canvas-alt) 0px, transparent 60%);
+  background-attachment: fixed;
+  color: var(--c-text-secondary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Ambient Canvas Glow & Subtle Texture */
+.story-bg-ambient {
+  display: none !important;
+}
+
+.story-bg-particles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.2;
+  background-image: radial-gradient(var(--c-leaf, #00F5FF) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}

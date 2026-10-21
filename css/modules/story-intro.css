@@ -1,0 +1,295 @@
+/* ==========================================================================
+   css/modules/story-intro.css - Our Story Narrative & Visual Showcase
+   ========================================================================== */
+
+.story-narrative-section {
+  position: relative;
+  z-index: 10;
+  padding: 110px 0 120px;
+  background: var(--c-bg-canvas-alt);
+  border-top: 1px solid var(--c-border-subtle);
+  transition: background 0.4s ease;
+}
+
+.story-grid-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 68px;
+  align-items: center;
+}
+
+/* Left Visual Collage */
+.story-collage-wrapper {
+  position: relative;
+}
+
+.collage-main-frame {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1.5px solid var(--c-border);
+  background: var(--c-bg-card-solid);
+}
+
+.collage-main-img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.collage-main-frame:hover .collage-main-img {
+  transform: scale(1.04);
+}
+
+.collage-main-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10, 28, 19, 0.88) 100%);
+}
+
+.collage-main-caption {
+  position: absolute;
+  bottom: 26px;
+  left: 28px;
+  right: 28px;
+  z-index: 3;
+}
+
+.collage-main-caption h4 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.collage-main-caption p {
+  font-size: 0.88rem;
+  color: var(--c-sand);
+}
+
+/* Overlapping Floating Badge */
+.collage-overlap-badge {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: var(--c-bg-card-solid);
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  animation: floatSubtle 4s ease-in-out infinite;
+}
+
+.overlap-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--c-bg-pill);
+  border: 1px solid var(--c-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-leaf);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.overlap-text h5 {
+  font-family: var(--font-brand);
+  font-size: 0.82rem;
+  color: var(--c-leaf);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.overlap-text p {
+  font-size: 0.82rem;
+  color: var(--c-text-primary);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.collage-secondary-frame {
+  position: absolute;
+  bottom: -32px;
+  right: -24px;
+  width: 210px;
+  height: 280px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 3.5px solid var(--c-bg-card-solid);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 0 25px rgba(167, 201, 87, 0.2);
+  z-index: 6;
+  background: var(--c-bg-card-solid);
+  transition: all var(--transition-smooth);
+}
+
+.collage-secondary-frame:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.65), 0 0 32px var(--c-leaf-glow);
+  border-color: var(--c-leaf);
+}
+
+.collage-secondary-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.collage-secondary-frame:hover .collage-secondary-img {
+  transform: scale(1.08);
+}
+
+.collage-secondary-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  right: 10px;
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--c-text-primary);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.collage-secondary-badge i {
+  color: var(--c-leaf);
+  font-size: 0.82rem;
+}
+
+/* Right Narrative Content */
+.story-text-wrapper {
+  position: relative;
+}
+
+.section-label-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-leaf);
+  margin-bottom: 14px;
+}
+
+.section-label-eyebrow i {
+  font-size: 0.95rem;
+}
+
+.story-heading-primary {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.22;
+  color: var(--c-text-primary);
+  margin-bottom: 24px;
+}
+
+.story-heading-primary span {
+  font-style: italic;
+  color: var(--c-leaf);
+}
+
+.story-lead-paragraph {
+  font-size: 1.12rem;
+  line-height: 1.75;
+  color: var(--c-text-primary);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.story-body-paragraph {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--c-text-muted);
+  margin-bottom: 18px;
+}
+
+/* Quote Callout */
+.story-quote-card {
+  margin: 28px 0 24px;
+  padding: 22px 26px;
+  border-left: 3px solid var(--c-gold);
+  background: var(--c-bg-card);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  font-style: italic;
+  color: var(--c-cream);
+  line-height: 1.6;
+  border-top: 1px solid var(--c-border-subtle);
+  border-right: 1px solid var(--c-border-subtle);
+  border-bottom: 1px solid var(--c-border-subtle);
+}
+
+/* Story Highlights Pill Row */
+.story-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.story-pill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  color: var(--c-text-secondary);
+  font-size: 0.84rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-fast);
+}
+
+.story-pill-item:hover {
+  border-color: var(--c-leaf);
+  transform: translateY(-1px);
+}
+
+.story-pill-item i {
+  color: var(--c-leaf);
+}
+
+.story-video-pill {
+  background: linear-gradient(135deg, var(--c-forest) 0%, var(--c-jungle) 100%);
+  border-color: var(--c-leaf);
+  color: var(--c-cream) !important;
+  text-decoration: none;
+}
+
+.story-video-pill:hover {
+  background: var(--c-leaf) !important;
+  color: #0c1f15 !important;
+  box-shadow: 0 4px 18px var(--c-leaf-glow);
+}
+
+.story-video-pill i {
+  color: var(--c-cream);
+}
+.story-video-pill:hover i {
+  color: #0c1f15;
+}

@@ -1,0 +1,484 @@
+/* ==========================================================================
+   css/modules/footer.css - Promise, Closing CTA, Brand Footer & Responsive
+   ========================================================================== */
+
+/* ==========================================================================
+   4. OUR PROMISE SECTION
+   ========================================================================== */
+.story-promise-section {
+  position: relative;
+  z-index: 10;
+  padding: 110px 0;
+  background: var(--c-bg-canvas-alt);
+  transition: background 0.4s ease;
+}
+
+.promise-card-outer {
+  position: relative;
+  background: var(--c-bg-card);
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--radius-xl);
+  padding: 60px 64px;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.promise-card-outer::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(167, 201, 87, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.promise-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.promise-badge-seal {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2px dashed var(--c-gold);
+  background: var(--c-bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
+}
+
+.promise-badge-seal i {
+  color: var(--c-gold);
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.promise-badge-seal span {
+  font-family: var(--font-brand);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-cream);
+  line-height: 1.3;
+}
+
+.promise-text-box h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  color: var(--c-text-primary);
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.promise-text-box h3 span {
+  color: var(--c-leaf);
+  font-style: italic;
+}
+
+.promise-text-box p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--c-text-muted);
+  margin-bottom: 22px;
+}
+
+.promise-pillars-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.promise-pillar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--c-text-secondary);
+}
+
+.promise-pillar-item i {
+  color: var(--c-leaf);
+}
+
+/* ==========================================================================
+   5. CLOSING SECTION: "Good Food. Great Moments. That's Pizza Stop Alephata."
+   ========================================================================== */
+.story-closing-section {
+  position: relative;
+  z-index: 10;
+  padding: 100px 0 130px;
+  text-align: center;
+  background: 
+    radial-gradient(circle at 50% 25%, rgba(167, 201, 87, 0.12) 0%, transparent 60%),
+    linear-gradient(180deg, var(--c-bg-canvas) 0%, var(--c-bg-canvas-alt) 100%);
+  border-top: 1px solid var(--c-border-subtle);
+  transition: background 0.4s ease;
+}
+
+.closing-emblem {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--c-bg-pill);
+  border: 1.5px solid var(--c-leaf);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-gold);
+  font-size: 1.35rem;
+  margin: 0 auto 24px;
+  box-shadow: 0 4px 20px var(--c-leaf-glow);
+}
+
+.closing-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: var(--c-text-primary);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.closing-heading span {
+  font-style: italic;
+  color: var(--c-leaf);
+}
+
+.closing-subtext {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--c-text-muted);
+  max-width: 680px;
+  margin: 0 auto 36px;
+}
+
+.closing-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 34px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, var(--c-jungle) 0%, var(--c-forest) 100%);
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--c-border);
+  box-shadow: 0 6px 22px var(--c-leaf-glow);
+  transition: all var(--transition-fast);
+}
+
+.btn-primary-action:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--c-leaf) 0%, var(--c-jungle) 100%);
+  color: #0c1f15;
+  box-shadow: 0 10px 30px rgba(167, 201, 87, 0.45);
+}
+
+.btn-secondary-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border-radius: var(--radius-pill);
+  background: var(--c-bg-card);
+  border: 1.5px solid var(--c-border);
+  color: var(--c-text-primary);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary-action:hover {
+  background: rgba(167, 201, 87, 0.2);
+  color: var(--c-leaf);
+  border-color: var(--c-leaf);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+/* ==========================================================================
+   MINIMAL BRAND FOOTER
+   ========================================================================== */
+.story-footer {
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid var(--c-border-subtle);
+  padding: 34px 24px;
+  text-align: center;
+  font-size: 0.86rem;
+  color: var(--c-text-dim);
+  background: var(--c-bg-canvas);
+  transition: background 0.4s ease;
+}
+
+.story-footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.story-footer a {
+  color: var(--c-leaf);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.story-footer a:hover {
+  color: var(--c-gold);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   KEYFRAME ANIMATIONS
+   ========================================================================== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@keyframes floatSubtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MOBILE, TABLET & DESKTOP)
+   ========================================================================== */
+@media (max-width: 1080px) {
+  .values-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .story-grid-layout {
+    gap: 48px;
+  }
+
+  .hero-content {
+    max-width: 420px;
+    padding: 22px 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .top-nav-bar {
+    padding: 0 20px;
+    height: 74px;
+  }
+
+  .story-grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .story-video-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .video-info-box {
+    align-items: center;
+  }
+
+  .video-phone-frame {
+    max-width: 300px;
+  }
+
+  .collage-main-img {
+    height: 380px;
+  }
+
+  .collage-overlap-badge {
+    top: -16px;
+    right: 16px;
+  }
+
+  .collage-secondary-frame {
+    width: 170px;
+    height: 220px;
+    bottom: -22px;
+    right: -8px;
+  }
+
+  .story-ambiance-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .ambiance-info-box {
+    align-items: center;
+  }
+
+  .ambiance-perk-item {
+    text-align: left;
+  }
+
+  .promise-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .promise-badge-seal {
+    margin: 0 auto;
+  }
+
+  .promise-pillars-list {
+    justify-content: center;
+  }
+
+  .promise-card-outer {
+    padding: 40px 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .top-nav-bar {
+    padding: 0 14px;
+    height: 68px;
+  }
+
+  .brand-nav-badge {
+    display: none;
+  }
+
+  .brand-logo-img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-nav-name {
+    font-size: 1.02rem;
+  }
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  .theme-active-label {
+    display: none;
+  }
+
+  .theme-picker-btn {
+    padding: 7px 10px;
+  }
+
+  .nav-badge-pill span {
+    display: none;
+  }
+
+  .nav-badge-pill {
+    padding: 7px 10px;
+  }
+
+  .nav-btn-login {
+    padding: 7px 14px;
+    font-size: 0.78rem;
+  }
+
+  .story-hero-section {
+    padding: 90px 14px 24px;
+    min-height: 82vh;
+  }
+
+  .collage-secondary-frame {
+    position: relative;
+    width: 100%;
+    max-width: 260px;
+    height: 240px;
+    margin: 18px auto 0;
+    bottom: auto;
+    right: auto;
+  }
+
+  .ambiance-showcase-img {
+    height: 380px;
+  }
+
+  .hero-content {
+    padding: 18px 18px;
+    border-radius: var(--radius-lg);
+  }
+
+  .hero-title {
+    font-size: 1.7rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.88rem;
+  }
+
+  .values-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-card {
+    padding: 28px 20px;
+  }
+
+  .promise-card-outer {
+    padding: 30px 18px;
+  }
+
+  .story-pills-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .closing-actions-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary-action,
+  .btn-secondary-action {
+    width: 100%;
+    justify-content: center;
+  }
+}
