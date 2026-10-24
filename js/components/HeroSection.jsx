@@ -12,33 +12,6 @@
           <div className="hero-gradient-overlay"></div>
           <div className="hero-vignette"></div>
         </div>
-
-        <div className="hero-content">
-          <div className="hero-content-main">
-            <div className="hero-eyebrow-pill">
-              <i className="fas fa-heart"></i>
-              <span>Welcome to Pizza Stop Alephata</span>
-            </div>
-
-            <h1 className="hero-title">
-              Every Pizza Has a <span>Story.</span>
-            </h1>
-          </div>
-
-          <div className="hero-content-meta">
-            <p className="hero-tagline">
-              Born from a passion for artisan food, warm conversations, and genuine hospitality along the Pune-Nashik
-              Highway. Step in, unwind, and discover the heartfelt craft behind every single slice.
-            </p>
-
-            <a href="#our-story" className="hero-scroll-cue" aria-label="Scroll down to read our story">
-              <span>Discover Our Journey</span>
-              <div className="hero-scroll-icon">
-                <i className="fas fa-chevron-down"></i>
-              </div>
-            </a>
-          </div>
-        </div>
       </section>
     );
   };

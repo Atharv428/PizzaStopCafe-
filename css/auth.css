@@ -411,10 +411,11 @@ html, body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .pizza-welcome {
-    padding: 30px 20px;
-    min-height: 200px;
+    height: auto;
+    min-height: auto;
+    padding: 28px 24px 16px;
   }
 
   .pizza-welcome .welcome-title {
@@ -1281,6 +1282,7 @@ html, body {
   .auth-split-container {
     grid-template-columns: 1fr;
     max-width: 540px;
+    min-height: auto;
   }
 
   .auth-showcase-panel {
@@ -1332,6 +1334,10 @@ html, body {
 
   .auth-page-wrapper {
     padding: 84px 14px 24px;
+  }
+
+  .pizza-welcome {
+    padding: 22px 18px 12px;
   }
 
   .auth-form-panel {
